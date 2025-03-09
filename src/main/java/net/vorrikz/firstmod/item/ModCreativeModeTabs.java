@@ -17,11 +17,12 @@ public class ModCreativeModeTabs {
     // Add creative mode tabs to the DeferredRegister
     public static final RegistryObject<CreativeModeTab> ALEXANDRITE_ITEMS_TAB = CREATIVE_MODE_TABS.register("alexandrite_items_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
+                    .icon(() -> new ItemStack(ModItems.CHISEL.get()))
                     .title(Component.translatable("creativetab.firstmod.alexandrite_items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                      output.accept(ModItems.ALEXANDRITE.get());
-                      output.accept(ModItems.RAW_ALEXANDRITE.get());
+                        output.accept(ModItems.CHISEL.get());
+                        output.accept(ModItems.ALEXANDRITE.get());
+                        output.accept(ModItems.RAW_ALEXANDRITE.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
