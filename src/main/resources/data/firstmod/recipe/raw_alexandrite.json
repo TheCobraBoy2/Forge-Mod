@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "firstmod:raw_alexandrite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "firstmod:raw_alexandrite"
+  }
+}

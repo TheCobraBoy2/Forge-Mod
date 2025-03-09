@@ -61,6 +61,11 @@ public class FirstMod {
             event.accept(ModBlocks.ALEXANDRITE_BLOCK);
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         }
+
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_ORE);
+            event.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
