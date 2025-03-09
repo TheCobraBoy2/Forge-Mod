@@ -2,6 +2,15 @@
   "values": [
     "firstmod:alexandrite_ore",
     "firstmod:raw_alexandrite_block",
+    "firstmod:alexandrite_door",
+    "firstmod:alexandrite_fence",
+    "firstmod:alexandrite_wall",
+    "firstmod:alexandrite_fence_gate",
+    "firstmod:alexandrite_stairs",
+    "firstmod:alexandrite_pressure_plate",
+    "firstmod:alexandrite_button",
+    "firstmod:alexandrite_trapdoor",
+    "firstmod:alexandrite_lamp",
     "firstmod:alexandrite_block"
   ]
 }

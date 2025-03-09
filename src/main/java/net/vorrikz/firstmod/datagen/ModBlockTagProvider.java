@@ -28,6 +28,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
                 .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE.get())
+                .add(ModBlocks.ALEXANDRITE_WALL.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get())
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get())
+                .add(ModBlocks.ALEXANDRITE_LAMP.get())
                 .add(ModBlocks.MAGIC_BLOCK.get());
 
         // Add the blocks mineable only with a diamond tool to the NEEDS_DIAMOND_TOOL tag
@@ -38,6 +47,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE.get())
+                .add(ModBlocks.ALEXANDRITE_WALL.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get())
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get())
+                .add(ModBlocks.ALEXANDRITE_LAMP.get())
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get());
         // Add the blocks that an iron tool cant mine but an alexandrite one can
         tag(ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL)
