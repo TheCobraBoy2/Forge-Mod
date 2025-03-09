@@ -1,4 +1,13 @@
-// 1.21	2025-03-09T03:03:10.865918	Tags for minecraft:block mod id firstmod
+// 1.21	2025-03-09T04:19:03.6540408	Tags for minecraft:block mod id firstmod
+9ed26f590709b1126c90ec3f0bb0799abaa2ef93 data/minecraft/tags/block/buttons.json
+81c25747447be5fe88ccbbf209ae27d1afc99318 data/minecraft/tags/block/doors.json
+fdf39e12c4677222e46846db4e92b2e161c45592 data/minecraft/tags/block/fences.json
+44ba5d031939d124e0008cfdbc41367b3a2db98d data/minecraft/tags/block/fence_gates.json
 a5a991d6b568a2f42f1779f9ef03fb079547716d data/minecraft/tags/block/mineable/pickaxe.json
 7d113f2ce543f11c718e3106e43ae327b11a6687 data/minecraft/tags/block/needs_diamond_tool.json
 d71d6fc55b50476dbcc474c27a4b2e2e0e2886f3 data/minecraft/tags/block/needs_iron_tool.json
+ebdc4c897d845b0e7ea7a98ae8625f08c5940c04 data/minecraft/tags/block/pressure_plates.json
+2b77e8b6bde32ab4c32e92738df9ba940d2b450d data/minecraft/tags/block/slabs.json
+e61335576448821c2c1b422bc792bf3e3f177acc data/minecraft/tags/block/stairs.json
+90510dafb8116ea53932c1ef6d88b78dae25f8df data/minecraft/tags/block/trapdoors.json
+886f7340a3121294da66809fd28a192fe1b488ad data/minecraft/tags/block/walls.json

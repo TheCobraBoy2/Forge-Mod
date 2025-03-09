@@ -3,8 +3,10 @@ package net.vorrikz.firstmod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
 import org.jetbrains.annotations.Nullable;
@@ -35,5 +37,32 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get());
+        // Add the fences to the FENCES tag
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.ALEXANDRITE_FENCE.get());
+        // Add the fence gates to the FENCE_GATES tag
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+        // Add the walls to the WALLS tag
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.ALEXANDRITE_WALL.get());
+        // Add the doors to the DOORS tag
+        tag(BlockTags.DOORS)
+                .add(ModBlocks.ALEXANDRITE_DOOR.get());
+        // Add the trapdoors to the TRAPDOORS tag
+        tag(BlockTags.TRAPDOORS)
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+        // Add the buttons to the BUTTONS tag
+        tag(BlockTags.BUTTONS)
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get());
+        // Add the pressure plates to the PRESSURE_PLATES tag
+        tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+        // Add the stairs to the STAIRS tag
+        tag(BlockTags.STAIRS)
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get());
+        // Add the slabs to the SLABS tag
+        tag(BlockTags.SLABS)
+                .add(ModBlocks.ALEXANDRITE_SLAB.get());
     }
 }

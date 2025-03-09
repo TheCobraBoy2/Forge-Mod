@@ -13,6 +13,19 @@
 
   "block.firstmod.magic_block": "Magic Block",
 
+  "block.firstmod.alexandrite_stairs": "Alexandrite Stairs",
+  "block.firstmod.alexandrite_slab": "Alexandrite Slab",
+
+  "block.firstmod.alexandrite_button": "Alexandrite Button",
+  "block.firstmod.alexandrite_pressure_plate": "Alexandrite Pressure Plate",
+
+  "block.firstmod.alexandrite_fence": "Alexandrite Fence",
+  "block.firstmod.alexandrite_fence_gate": "Alexandrite Fence Gate",
+  "block.firstmod.alexandrite_wall": "Alexandrite Wall",
+
+  "block.firstmod.alexandrite_door": "Alexandrite Door",
+  "block.firstmod.alexandrite_trapdoor": "Alexandrite Trapdoor",
+
   "creativetab.firstmod.alexandrite_items": "Alexandrite Items",
   "creativetab.firstmod.alexandrite_blocks": "Alexandrite Blocks",
 

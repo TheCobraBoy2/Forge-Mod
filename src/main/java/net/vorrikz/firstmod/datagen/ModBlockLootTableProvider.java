@@ -30,13 +30,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
         dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
+        dropSelf(ModBlocks.ALEXANDRITE_STAIRS.get());
+        dropSelf(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.ALEXANDRITE_BUTTON.get());
+        dropSelf(ModBlocks.ALEXANDRITE_FENCE.get());
+        dropSelf(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+        dropSelf(ModBlocks.ALEXANDRITE_WALL.get());
+        dropSelf(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
 
-        // Add drop tables for the ores
+        // Add drop tables for blocks that don't drop themselves
         this.add(ModBlocks.ALEXANDRITE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 4));
 
         this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 3, 7));
+
+        this.add(ModBlocks.ALEXANDRITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ALEXANDRITE_SLAB.get()));
+
+        this.add(ModBlocks.ALEXANDRITE_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ALEXANDRITE_DOOR.get()));
     }
 
     // Helper method for ore drops with multiple items

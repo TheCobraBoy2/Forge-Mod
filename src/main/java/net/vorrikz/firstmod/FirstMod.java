@@ -80,6 +80,23 @@ public class FirstMod {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.CHISEL);
         }
+
+        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_BUTTON);
+            event.accept(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);
+            event.accept(ModBlocks.ALEXANDRITE_DOOR);
+            event.accept(ModBlocks.ALEXANDRITE_TRAPDOOR);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_WALL);
+            event.accept(ModBlocks.ALEXANDRITE_DOOR);
+            event.accept(ModBlocks.ALEXANDRITE_TRAPDOOR);
+            event.accept(ModBlocks.ALEXANDRITE_FENCE);
+            event.accept(ModBlocks.ALEXANDRITE_FENCE_GATE);
+            event.accept(ModBlocks.ALEXANDRITE_STAIRS);
+            event.accept(ModBlocks.ALEXANDRITE_SLAB);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
