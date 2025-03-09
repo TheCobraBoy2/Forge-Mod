@@ -127,6 +127,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.ALEXANDRITE_CHESTPLATE);
         trimmedArmorItem(ModItems.ALEXANDRITE_LEGGINGS);
         trimmedArmorItem(ModItems.ALEXANDRITE_BOOTS);
+
+        // Animal Armor
+        basicItem(ModItems.ALEXANDRITE_HORSE_AROMOR.get());
     }
 
     // Helper method for tools / hand held items

@@ -75,6 +75,10 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE_AROMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
                     new Item.Properties().durability(ArmorItem.Type.LEGGINGS.m_321370_(18))));
 
+    public static final RegistryObject<Item> ALEXANDRITE_HORSE_AROMOR = ITEMS.register("alexandrite_horse_armor",
+            () -> new AnimalArmorItem(ModArmorMaterials.ALEXANDRITE_AROMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
+                    false, new Item.Properties().stacksTo(1)));
+
     // Method to register the items
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

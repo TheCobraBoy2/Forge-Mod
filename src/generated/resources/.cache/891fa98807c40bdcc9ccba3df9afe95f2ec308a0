@@ -1,4 +1,4 @@
-// 1.21	2025-03-09T07:33:01.5492284	Item Models: firstmod
+// 1.21	2025-03-09T07:57:51.5373644	Item Models: firstmod
 277d23d82cc594e89a3be1f963c9a3e9ab9e2e89 assets/firstmod/models/item/alexandrite.json
 b7dd8e73135f0ac5695b9f631008bd5b4b179921 assets/firstmod/models/item/alexandrite_axe.json
 247a5031fce43734e6f0c0fafc2ca8963e93b0d6 assets/firstmod/models/item/alexandrite_boots.json
@@ -39,6 +39,7 @@ e77b4edd712ffe27b93541c0ce44d2e302ba9eaf assets/firstmod/models/item/alexandrite
 0c8bd2fb78a2fe95cb2f2201892ec7674a145278 assets/firstmod/models/item/alexandrite_helmet_quartz_trim.json
 c19d8cf6ee1d67b4320b1718da66770ce69de94b assets/firstmod/models/item/alexandrite_helmet_redstone_trim.json
 a113c7e0948a7dd45fc5f2ec28ed3f1599b4405a assets/firstmod/models/item/alexandrite_hoe.json
+8a07eda5e996b4e0112509aeadd160b3b707cb64 assets/firstmod/models/item/alexandrite_horse_armor.json
 a67613170b218a47e10a8462a61bc84b57e5f4d8 assets/firstmod/models/item/alexandrite_leggings.json
 5783a3e5ad08cd9e0c3a7f1010d1d613247bf61f assets/firstmod/models/item/alexandrite_leggings_amethyst_trim.json
 67bdee723490dc7f029ec6c5eef1dd1e27765fef assets/firstmod/models/item/alexandrite_leggings_copper_trim.json

@@ -116,6 +116,8 @@ public class FirstMod {
             event.accept(ModItems.ALEXANDRITE_HELMET);
             event.accept(ModItems.ALEXANDRITE_LEGGINGS);
             event.accept(ModItems.ALEXANDRITE_CHESTPLATE);
+
+            event.accept(ModItems.ALEXANDRITE_HORSE_AROMOR);
         }
     }
 
