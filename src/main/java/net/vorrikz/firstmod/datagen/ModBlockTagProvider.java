@@ -4,11 +4,13 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -37,6 +39,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get());
+        // Add the blocks that an iron tool cant mine but an alexandrite one can
+        tag(ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL)
+                .add(ModBlocks.MAGIC_BLOCK.get())
+                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
+                .add(Blocks.OBSIDIAN)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+        // Ensure all blocks not listed above and can't be mined by iron tools cant be mined by alexandrite tools
+        tag(ModTags.Blocks.INCORRECT_FOR_ALEXANDRITE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL);
         // Add the fences to the FENCES tag
         tag(BlockTags.FENCES)
                 .add(ModBlocks.ALEXANDRITE_FENCE.get());

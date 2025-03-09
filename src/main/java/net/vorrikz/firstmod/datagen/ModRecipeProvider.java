@@ -1,21 +1,19 @@
 package net.vorrikz.firstmod.datagen;
 
-import net.minecraft.advancements.Criterion;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.minecraftforge.fml.common.Mod;
 import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.item.ModItems;
 import net.minecraft.world.item.crafting.*;
-import org.jetbrains.annotations.NotNull;
 
 
 import java.util.List;
@@ -61,6 +59,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModItems.CHISEL.get())
                 .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get()))
                 .save(recipeOutput);
+        RecipeUtil.axe(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_AXE);
+        RecipeUtil.hoe(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_HOE);
+        RecipeUtil.pickaxe(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_PICKAXE);
+        RecipeUtil.sword(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_SWORD);
+        RecipeUtil.shovel(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_SHOVEL);
 
         // Shapeless recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)

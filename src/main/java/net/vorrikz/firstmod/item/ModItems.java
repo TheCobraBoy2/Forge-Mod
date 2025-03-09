@@ -1,9 +1,7 @@
 package net.vorrikz.firstmod.item;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -42,6 +40,21 @@ public class ModItems {
     public static final RegistryObject<Item> AURORA_ASHES = ITEMS.register("aurora_ashes",
             () -> new FuelItem(new Item.Properties(), 1200));
 
+    public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
+            () -> new SwordItem(ModToolTiers.ALEXANDRITE, new Item.Properties()
+                    .attributes(SwordItem.m_322253_(ModToolTiers.ALEXANDRITE, 3, -2.4f))));
+    public static final RegistryObject<Item> ALEXANDRITE_PICKAXE = ITEMS.register("alexandrite_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.ALEXANDRITE, new Item.Properties()
+                    .attributes(PickaxeItem.m_320415_(ModToolTiers.ALEXANDRITE, 1, 2.8f))));
+    public static final RegistryObject<Item> ALEXANDRITE_AXE = ITEMS.register("alexandrite_axe",
+            () -> new AxeItem(ModToolTiers.ALEXANDRITE, new Item.Properties()
+                    .attributes(AxeItem.m_320415_(ModToolTiers.ALEXANDRITE, 6, -3.2f))));
+    public static final RegistryObject<Item> ALEXANDRITE_SHOVEL = ITEMS.register("alexandrite_shovel",
+            () -> new ShovelItem(ModToolTiers.ALEXANDRITE, new Item.Properties()
+                    .attributes(ShovelItem.m_320415_(ModToolTiers.ALEXANDRITE, 1.5f, -3.0f))));
+    public static final RegistryObject<Item> ALEXANDRITE_HOE = ITEMS.register("alexandrite_hoe",
+            () -> new HoeItem(ModToolTiers.ALEXANDRITE, new Item.Properties()
+                    .attributes(HoeItem.m_320415_(ModToolTiers.ALEXANDRITE, 0, -3f))));
 
     // Method to register the items
     public static void register(IEventBus eventBus) {

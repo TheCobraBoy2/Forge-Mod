@@ -22,10 +22,19 @@ public class ModCreativeModeTabs {
                     // Add items to the custom ALEXANDRITE_ITEMS_TAB creative tab
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.CHISEL.get());
+
                         output.accept(ModItems.ALEXANDRITE.get());
                         output.accept(ModItems.RAW_ALEXANDRITE.get());
+
                         output.accept(ModItems.KOHLRABI.get());
+
                         output.accept(ModItems.AURORA_ASHES.get());
+
+                        output.accept(ModItems.ALEXANDRITE_SWORD.get());
+                        output.accept(ModItems.ALEXANDRITE_AXE.get());
+                        output.accept(ModItems.ALEXANDRITE_HOE.get());
+                        output.accept(ModItems.ALEXANDRITE_PICKAXE.get());
+                        output.accept(ModItems.ALEXANDRITE_SHOVEL.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",

@@ -1,4 +1,6 @@
-// 1.21	2025-03-09T04:19:03.6540408	Tags for minecraft:block mod id firstmod
+// 1.21	2025-03-09T06:00:14.9588701	Tags for minecraft:block mod id firstmod
+3fa2732c0db9a9142fb1f3f0be031ab5d3075f0f data/firstmod/tags/block/incorrect_for_alexandrite_tool.json
+aa6e018a53879d76ca1efd35cf30cfa1239b69d4 data/firstmod/tags/block/needs_alexandrite_tool.json
 9ed26f590709b1126c90ec3f0bb0799abaa2ef93 data/minecraft/tags/block/buttons.json
 81c25747447be5fe88ccbbf209ae27d1afc99318 data/minecraft/tags/block/doors.json
 fdf39e12c4677222e46846db4e92b2e161c45592 data/minecraft/tags/block/fences.json

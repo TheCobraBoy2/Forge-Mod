@@ -2,6 +2,7 @@ package net.vorrikz.firstmod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -43,6 +44,20 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Doors
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
+
+        // Tools
+        handheldItem(ModItems.ALEXANDRITE_SWORD);
+        handheldItem(ModItems.ALEXANDRITE_SHOVEL);
+        handheldItem(ModItems.ALEXANDRITE_AXE);
+        handheldItem(ModItems.ALEXANDRITE_PICKAXE);
+        handheldItem(ModItems.ALEXANDRITE_HOE);
+    }
+
+    // Helper method for tools / hand held items
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     // Helper method for buttons
