@@ -12,5 +12,10 @@
   "block.firstmod.magic_block": "Magic Block",
 
   "creativetab.firstmod.alexandrite_items": "Alexandrite Items",
-  "creativetab.firstmod.alexandrite_blocks": "Alexandrite Blocks"
+  "creativetab.firstmod.alexandrite_blocks": "Alexandrite Blocks",
+
+  "tooltip.firstmod.magic_block.tooltip": "This block is quite §9MAGICAL§r",
+  "tooltip.firstmod.chisel.tooltip.shift": "This Item changes certain blocks",
+  "tooltip.firstmod.chisel.tooltip": "Press §eShift§r for more information!",
+  "tooltip.firstmod.kohlrabi.tooltip": "This tastes great!"
 }
