@@ -10,6 +10,7 @@ import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.item.custom.FuelItem;
 import net.vorrikz.firstmod.item.custom.ChiselItem;
 import net.vorrikz.firstmod.item.custom.HammerItem;
+import net.vorrikz.firstmod.item.custom.ModArmorItem;
 
 import java.util.List;
 
@@ -62,7 +63,7 @@ public class ModItems {
 
     // The .m_321370 is .getDurability but my parchment version doesn't have it
     public static final RegistryObject<Item> ALEXANDRITE_HELMET = ITEMS.register("alexandrite_helmet",
-            () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE_AROMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.ALEXANDRITE_AROMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.m_321370_(18))));
     public static final RegistryObject<Item> ALEXANDRITE_BOOTS = ITEMS.register("alexandrite_boots",
             () -> new ArmorItem(ModArmorMaterials.ALEXANDRITE_AROMOR_MATERIAL, ArmorItem.Type.BOOTS,
