@@ -1,14 +1,19 @@
 package net.vorrikz.firstmod.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.block.custom.AlexandriteLampBlock;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -45,6 +50,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(ModBlocks.ALEXANDRITE_DOOR.get(), modLoc("block/alexandrite_door_bottom"), modLoc("block/alexandrite_door_top"), "cutout");
         trapdoorBlockWithRenderType(ModBlocks.ALEXANDRITE_TRAPDOOR.get(), modLoc("block/alexandrite_trapdoor"), true, "cutout");
 
+        // Lamps
+        customLamp(ModBlocks.ALEXANDRITE_LAMP, "alexandrite_lamp", AlexandriteLampBlock.CLICKED);
+
         // Item block json files for the ones that don't get them auto generated
         blockItem(ModBlocks.ALEXANDRITE_STAIRS);
         blockItem(ModBlocks.ALEXANDRITE_SLAB);
@@ -52,6 +60,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ALEXANDRITE_FENCE_GATE);
         blockItem(ModBlocks.ALEXANDRITE_TRAPDOOR, "_bottom");
     }
+    // Method for a lamp
+    private void customLamp(RegistryObject<? extends Block> block, String name, BooleanProperty onOffState) {
+        System.out.println("id = " + block.getId() + " name = " + block.get().getName());
+        getVariantBuilder(block.get()).forAllStates(state -> {
+            if(state.getValue(onOffState)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name + "_on",
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + name + "_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll(name + "_off",
+                        ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + name + "_off")))}     ;
+            }
+        });
+        simpleBlockItem(block.get(), models().cubeAll(name + "_on",
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + name + "_on")));
+    }
+
     // Helper method to load a block with an item
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         var object = blockRegistryObject.get();

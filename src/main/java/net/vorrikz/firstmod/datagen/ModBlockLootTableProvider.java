@@ -37,6 +37,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
         dropSelf(ModBlocks.ALEXANDRITE_WALL.get());
         dropSelf(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+        dropSelf(ModBlocks.ALEXANDRITE_LAMP.get());
 
         // Add drop tables for blocks that don't drop themselves
         this.add(ModBlocks.ALEXANDRITE_ORE.get(),

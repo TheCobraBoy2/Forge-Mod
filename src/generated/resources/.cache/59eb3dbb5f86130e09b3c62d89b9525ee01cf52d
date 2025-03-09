@@ -1,10 +1,11 @@
-// 1.21	2025-03-09T04:19:03.6560418	Loot Tables
+// 1.21	2025-03-09T04:49:19.8971971	Loot Tables
 c7f946211fdb4db8a4a620a357e1e78d72380826 data/firstmod/loot_table/blocks/alexandrite_block.json
 35da426b8427a21fb1f5c0fb3f24967e2fd66022 data/firstmod/loot_table/blocks/alexandrite_button.json
 1d0e7c46d1a1b4b17dc5bc54d9830b5c33d1bca2 data/firstmod/loot_table/blocks/alexandrite_deepslate_ore.json
 88d5cecb9429b558e2a103eaa074618493e464f5 data/firstmod/loot_table/blocks/alexandrite_door.json
 45d866c537a28e390864a813979ed245874aa9ca data/firstmod/loot_table/blocks/alexandrite_fence.json
 d19075a05735b16c2d96ce4cf8c388a504962aff data/firstmod/loot_table/blocks/alexandrite_fence_gate.json
+2f596f45bb70bca9928ddacf9f4211aeaa9f3c33 data/firstmod/loot_table/blocks/alexandrite_lamp.json
 6fa59b4001979dc8b7522a91d946f2ed2e4b561c data/firstmod/loot_table/blocks/alexandrite_ore.json
 91bedd715e88f41acb99746fe3c49f3076dea678 data/firstmod/loot_table/blocks/alexandrite_pressure_plate.json
 6d09e13023415d41b27dadd7143a7e346b746b83 data/firstmod/loot_table/blocks/alexandrite_slab.json
