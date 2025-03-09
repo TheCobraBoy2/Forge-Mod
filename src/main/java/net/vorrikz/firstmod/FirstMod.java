@@ -18,6 +18,7 @@ import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.component.ModDataComponentTypes;
 import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
+import net.vorrikz.firstmod.util.ModItemProperties;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -118,6 +119,8 @@ public class FirstMod {
             event.accept(ModItems.ALEXANDRITE_CHESTPLATE);
 
             event.accept(ModItems.ALEXANDRITE_HORSE_AROMOR);
+
+            event.accept(ModItems.VORRIK_BOW);
         }
     }
 
@@ -132,7 +135,7 @@ public class FirstMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            ModItemProperties.addCustomItemProperties();
         }
     }
 }

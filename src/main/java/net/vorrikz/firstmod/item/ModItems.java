@@ -79,6 +79,9 @@ public class ModItems {
             () -> new AnimalArmorItem(ModArmorMaterials.ALEXANDRITE_AROMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,
                     false, new Item.Properties().stacksTo(1)));
 
+    public static final RegistryObject<Item> VORRIK_BOW = ITEMS.register("vorrik_bow",
+            () -> new BowItem(new Item.Properties().durability(500)));
+
     // Method to register the items
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

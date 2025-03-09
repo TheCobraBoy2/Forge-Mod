@@ -100,7 +100,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.KOHLRABI.get());
 
         // Advanced items
-        basicItem(ModItems.CHISEL.get());
+        // basicItem(ModItems.CHISEL.get()); Handled manually for custom item properties
 
         // Buttons
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);

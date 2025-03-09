@@ -44,6 +44,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_CHESTPLATE.get());
 
                         output.accept(ModItems.ALEXANDRITE_HORSE_AROMOR.get());
+
+                        output.accept(ModItems.VORRIK_BOW.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
