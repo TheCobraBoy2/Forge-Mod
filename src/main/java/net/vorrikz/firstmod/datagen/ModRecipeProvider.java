@@ -64,6 +64,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         RecipeUtil.pickaxe(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_PICKAXE);
         RecipeUtil.sword(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_SWORD);
         RecipeUtil.shovel(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_SHOVEL);
+        RecipeUtil.hammer(recipeOutput, ModItems.ALEXANDRITE, ModBlocks.ALEXANDRITE_BLOCK, ModItems.ALEXANDRITE_HAMMER);
 
         // Shapeless recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)

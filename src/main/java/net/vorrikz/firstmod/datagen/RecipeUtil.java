@@ -8,6 +8,8 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.item.ModItems;
 
@@ -36,6 +38,7 @@ public abstract class RecipeUtil extends RecipeProvider {
     public static void shovel(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern(" A ").pattern(" B ").pattern(" B ").define('A', material.get()).define('B', Items.STICK).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
     }
-
-
+    public static void hammer(RecipeOutput recipeOutput, RegistryObject<Item> materialItem, RegistryObject<Block> materialBlock, RegistryObject<Item> result) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("ABA").pattern("ABA").pattern(" C ").define('A', materialItem.get()).define('B', materialBlock.get()).define('C', Items.BLAZE_ROD).unlockedBy(getHasName(materialBlock.get()), has(materialBlock.get())).save(recipeOutput);
+    }
 }

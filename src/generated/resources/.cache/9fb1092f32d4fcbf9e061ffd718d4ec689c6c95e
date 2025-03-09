@@ -1,4 +1,4 @@
-// 1.21	2025-03-09T06:00:14.9613786	Recipes
+// 1.21	2025-03-09T06:36:45.2075665	Recipes
 cbafe0a809d8982ce94abcb39a967dbbea03c4a1 data/firstmod/advancement/recipes/building_blocks/alexandrite_slab.json
 76e32794b13a6934d2f1eb3a7226641642b3999f data/firstmod/advancement/recipes/building_blocks/alexandrite_stairs.json
 b86d1ab77e4ec47dcaeb36fea0d2937a70614b2f data/firstmod/advancement/recipes/building_blocks/alexandrite_wall.json
@@ -20,6 +20,7 @@ b6f3e2a093689f919ee45b836af2edca801c2734 data/firstmod/advancement/recipes/redst
 34edeb524b58c914e8be05f120b26dac563e48bf data/firstmod/advancement/recipes/redstone/alexandrite_pressure_plate.json
 55e07d9204289a9f66777b574b043491b87ae373 data/firstmod/advancement/recipes/redstone/alexandrite_trapdoor.json
 7b0a0ed8511ffea243bd4995cb1cdd75ecc5971f data/firstmod/advancement/recipes/tools/alexandrite_axe.json
+714e0dcd0e96d2d97c529e1d1d24a54fe4646071 data/firstmod/advancement/recipes/tools/alexandrite_hammer.json
 a509fcbf2e244110e39b8582e5f2adb6e3550843 data/firstmod/advancement/recipes/tools/alexandrite_hoe.json
 c0d20578cdd1568b45e5daaa5a31753e83cacd78 data/firstmod/advancement/recipes/tools/alexandrite_pickaxe.json
 5f64bf8f22ad1819dbe39abd957722872af19074 data/firstmod/advancement/recipes/tools/alexandrite_shovel.json
@@ -36,6 +37,7 @@ c7d1aaa91cde71fc0aa44046c6d73bab8d87a5af data/firstmod/recipe/alexandrite_button
 a7042d7ae2210aaf02f12a76c47eb3c48406406a data/firstmod/recipe/alexandrite_from_smelting_alexandrite_deepslate_ore.json
 e96d23167760eb27332da926288639bb031b68e4 data/firstmod/recipe/alexandrite_from_smelting_alexandrite_ore.json
 d56283a59f5a71071a90209659f88674049697da data/firstmod/recipe/alexandrite_from_smelting_raw_alexandrite.json
+621c159b22e0b3c91a256e67de1124f9cc922144 data/firstmod/recipe/alexandrite_hammer.json
 5050b29bdfcddb9b8e4d21751662eb9882d243f8 data/firstmod/recipe/alexandrite_hoe.json
 3af13057896a6ce11eef1ca88057fe70d0a17230 data/firstmod/recipe/alexandrite_pickaxe.json
 ef2a283bad438a428cfb2ef74c8306996f8462c9 data/firstmod/recipe/alexandrite_pressure_plate.json

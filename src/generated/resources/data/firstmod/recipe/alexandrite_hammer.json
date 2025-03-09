@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "firstmod:alexandrite"
+    },
+    "B": {
+      "item": "firstmod:alexandrite_block"
+    },
+    "C": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "ABA",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:alexandrite_hammer"
+  }
+}

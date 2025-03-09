@@ -83,6 +83,7 @@ public class FirstMod {
             event.accept(ModItems.ALEXANDRITE_HOE);
             event.accept(ModItems.ALEXANDRITE_SHOVEL);
             event.accept(ModItems.ALEXANDRITE_SWORD);
+            event.accept(ModItems.ALEXANDRITE_HAMMER);
         }
 
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
