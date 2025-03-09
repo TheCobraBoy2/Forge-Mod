@@ -1,9 +1,15 @@
 package net.vorrikz.firstmod.event;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -36,6 +42,17 @@ public class ModeEvents {
                 HARVERSTED_BLOCKS.add(pos);
                 serverPlayer.gameMode.destroyBlock(pos);
                 HARVERSTED_BLOCKS.remove(pos);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onLivingDamage(LivingDamageEvent event) {
+        if (event.getEntity() instanceof Sheep sheep && event.getSource().getDirectEntity() instanceof Player player) {
+            if (player.getMainHandItem().getItem() == Items.END_ROD) {
+                player.sendSystemMessage(Component.literal(player.getName().getString() + " JUST HIT A SHEEP WITH AN END ROD! YOU SICK FUCK"));
+                sheep.addEffect(new MobEffectInstance(MobEffects.POISON, 600, 5));
+                player.getMainHandItem().shrink(1);
             }
         }
     }

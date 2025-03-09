@@ -17,6 +17,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.component.ModDataComponentTypes;
+import net.vorrikz.firstmod.sound.ModSounds;
 
 import java.util.List;
 import java.util.Map;
@@ -55,7 +56,7 @@ public class ChiselItem extends Item {
                         item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 // Play a sound
-                level.playSound(null, pContext.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+                level.playSound(null, pContext.getClickedPos(), ModSounds.CHISEL_USE.get(), SoundSource.BLOCKS);
 
                 // Set the COORDINATES data component type to the clicked position
                 pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());

@@ -1,0 +1,38 @@
+{
+  "chisel_use": {
+    "subtitles": "sounds.firstmod.chisel_use",
+    "sounds": [
+      "firstmod:chisel_use"
+    ]
+  },
+  "magic_block_step": {
+    "subtitles": "sounds.firstmod.magic_block_step",
+    "sounds": [
+      "firstmod:magic_block_step"
+    ]
+  },
+  "magic_block_place": {
+    "subtitles": "sounds.firstmod.magic_block_place",
+    "sounds": [
+      "firstmod:magic_block_place"
+    ]
+  },
+  "magic_block_break": {
+    "subtitles": "sounds.firstmod.magic_block_break",
+    "sounds": [
+      "firstmod:magic_block_break"
+    ]
+  },
+  "magic_block_hit": {
+    "subtitles": "sounds.firstmod.magic_block_hit",
+    "sounds": [
+      "firstmod:magic_block_hit"
+    ]
+  },
+  "magic_block_fall": {
+    "subtitles": "sounds.firstmod.magic_block_fall",
+    "sounds": [
+      "firstmod:magic_block_fall"
+    ]
+  }
+}

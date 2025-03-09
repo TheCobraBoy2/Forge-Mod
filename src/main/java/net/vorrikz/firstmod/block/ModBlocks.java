@@ -15,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.vorrikz.firstmod.block.custom.AlexandriteLampBlock;
 import net.vorrikz.firstmod.block.custom.MagicBlock;
 import net.vorrikz.firstmod.item.ModItems;
+import net.vorrikz.firstmod.sound.ModSounds;
 
 import java.util.function.Supplier;
 
@@ -41,7 +42,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of()
-                    .strength(2f).requiresCorrectToolForDrops()));
+                    .strength(2f).requiresCorrectToolForDrops().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final RegistryObject<StairBlock> ALEXANDRITE_STAIRS = registerBlock("alexandrite_stairs",
             () -> new StairBlock(ModBlocks.ALEXANDRITE_BLOCK.get().defaultBlockState(),

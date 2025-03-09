@@ -18,6 +18,7 @@ import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.component.ModDataComponentTypes;
 import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
+import net.vorrikz.firstmod.sound.ModSounds;
 import net.vorrikz.firstmod.util.ModItemProperties;
 import org.slf4j.Logger;
 
@@ -45,6 +46,9 @@ public class FirstMod {
 
         // Register the data component types with the event bus
         ModDataComponentTypes.register(modEventBus);
+
+        // Register the sounds with the event bus
+        ModSounds.register(modEventBus);
 
         // Register the items to a creative tab
         modEventBus.addListener(this::addCreative);
