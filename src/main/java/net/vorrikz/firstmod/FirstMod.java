@@ -82,7 +82,6 @@ public class FirstMod {
             event.accept(ModItems.ALEXANDRITE_AXE);
             event.accept(ModItems.ALEXANDRITE_HOE);
             event.accept(ModItems.ALEXANDRITE_SHOVEL);
-            event.accept(ModItems.ALEXANDRITE_SWORD);
             event.accept(ModItems.ALEXANDRITE_HAMMER);
         }
 
@@ -108,6 +107,15 @@ public class FirstMod {
 
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModBlocks.ALEXANDRITE_LAMP);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.ALEXANDRITE_SWORD);
+
+            event.accept(ModItems.ALEXANDRITE_BOOTS);
+            event.accept(ModItems.ALEXANDRITE_HELMET);
+            event.accept(ModItems.ALEXANDRITE_LEGGINGS);
+            event.accept(ModItems.ALEXANDRITE_CHESTPLATE);
         }
     }
 
