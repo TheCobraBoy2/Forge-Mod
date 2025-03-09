@@ -51,6 +51,7 @@ public class FirstMod {
 
     }
 
+    // Add items to vanilla creative mode tabs
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ALEXANDRITE);

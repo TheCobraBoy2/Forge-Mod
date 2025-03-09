@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModItems.CHISEL.get()))
                     .title(Component.translatable("creativetab.firstmod.alexandrite_items"))
+                    // Add items to the custom ALEXANDRITE_ITEMS_TAB creative tab
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.CHISEL.get());
                         output.accept(ModItems.ALEXANDRITE.get());
@@ -32,6 +33,7 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
                     .withTabsBefore(ALEXANDRITE_ITEMS_TAB.getId())
                     .title(Component.translatable("creativetab.firstmod.alexandrite_blocks"))
+                    // Add blocks to the custom ALEXANDRITE_BLOCKS_TAB creative tab
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());

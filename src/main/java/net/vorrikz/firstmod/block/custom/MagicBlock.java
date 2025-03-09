@@ -26,20 +26,26 @@ public class MagicBlock extends Block {
         super(properties);
     }
 
+    // Override the useWithoutItem method to set a sound when clicked
     @Override
     protected InteractionResult useWithoutItem(BlockState pState, Level pLevel, BlockPos pPos,
                                                Player pPlayer, BlockHitResult pHitResult) {
+        // Plays the amethyst cluster place sound
         pLevel.playSound(pPlayer, pPos, SoundEvents.AMETHYST_CLUSTER_PLACE, SoundSource.BLOCKS, 1f, 1f);
         return InteractionResult.SUCCESS;
     }
 
+    // Override the stepOn method to change certain items to other when thrown onto the block
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
+        // checks if it is an item entity that is on the block
         if (pEntity instanceof ItemEntity itemEntity) {
+            // checks if it is a valid item for a diamond (Uses the TRANSFORMABLE_ITEMS tag)
             if (isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(Items.DIAMOND, itemEntity.getItem().getCount()));
             }
 
+            // checks if it is a valid item for an emerald
             if (itemEntity.getItem().getItem() == Items.RABBIT_FOOT) {
                 itemEntity.setItem(new ItemStack(Items.EMERALD, itemEntity.getItem().getCount()));
             }
@@ -47,11 +53,12 @@ public class MagicBlock extends Block {
 
         super.stepOn(pLevel, pPos, pState, pEntity);
     }
-
+    // Helper method to check if the item is valid for a diamond
     private boolean isValidItem(ItemStack item) {
         return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
+    // Override the appendHoverText method to set a custom tooltip
     @Override
     public void appendHoverText(ItemStack pStack, Item.TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
         pTooltipComponents.add(Component.translatable("tooltip.firstmod.magic_block.tooltip"));
