@@ -12,6 +12,7 @@ import net.vorrikz.firstmod.FirstMod;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.vorrikz.firstmod.block.custom.MagicBlock;
 import net.vorrikz.firstmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -38,6 +39,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALEXANDRITE_DEEPSLATE_ORE = registerBlock("alexandrite_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of()
+                    .strength(2f).requiresCorrectToolForDrops()));
 
 
     // Helper method to register the block

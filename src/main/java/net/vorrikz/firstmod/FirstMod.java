@@ -62,9 +62,17 @@ public class FirstMod {
             event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
         }
 
+        if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
+            event.accept(ModBlocks.MAGIC_BLOCK.get());
+        }
+
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.ALEXANDRITE_ORE);
             event.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.CHISEL);
         }
     }
 
