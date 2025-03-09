@@ -3,5 +3,8 @@
   "item.firstmod.raw_alexandrite": "Raw Alexandrite",
 
   "block.firstmod.alexandrite_block": "Block of Alexandrite",
-  "block.firstmod.raw_alexandrite_block": "Block of Raw Alexandrite"
+  "block.firstmod.raw_alexandrite_block": "Block of Raw Alexandrite",
+
+  "creativetab.firstmod.alexandrite_items": "Alexandrite Items",
+  "creativetab.firstmod.alexandrite_blocks": "Alexandrite Blocks"
 }

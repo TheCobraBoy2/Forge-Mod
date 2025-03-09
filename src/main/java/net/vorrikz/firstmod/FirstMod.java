@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -32,12 +33,15 @@ public class FirstMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the mod items with the event bus
+        // Register the mods creative mode tabs
+        ModCreativeModeTabs.register(modEventBus);
+
+        // Register the mods items with the event bus
         ModItems.register(modEventBus);
-        // Register the mod blocks with the event bus
+        // Register the mods blocks with the event bus
         ModBlocks.register(modEventBus);
 
-        // Register the item to a creative tab
+        // Register the items to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -47,7 +51,6 @@ public class FirstMod {
 
     }
 
-    // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.ALEXANDRITE);
