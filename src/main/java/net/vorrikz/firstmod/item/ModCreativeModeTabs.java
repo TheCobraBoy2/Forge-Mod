@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.potion.ModPotions;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =

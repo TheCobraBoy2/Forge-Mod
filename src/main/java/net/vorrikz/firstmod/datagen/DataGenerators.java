@@ -38,6 +38,8 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), blockTagsProvider);
         // Add the item tag provider to the generator
         generator.addProvider(event.includeServer(), new ModItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+        // Add the data pack entries to the generator
+        generator.addProvider(event.includeServer(), new ModDataPackEntries(packOutput, lookupProvider));
 
         // INCLUDING THE CLIENT ----
         // Add the item model provider to the generator

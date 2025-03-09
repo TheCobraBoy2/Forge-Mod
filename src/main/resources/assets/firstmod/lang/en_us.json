@@ -32,6 +32,17 @@
 
   "effect.firstmod.slimey": "Slimey",
 
+  "painting.firstmod.world.title": "World",
+  "painting.firstmod.world.author": "NanoAttack",
+
+  "painting.firstmod.shrimp.title": "Shrimp",
+  "painting.firstmod.shrimp.author": "NanoAttack",
+
+  "painting.firstmod.saw_them.title": "Saw Them",
+  "painting.firstmod.saw_them.author": "NanoAttack",
+
+  "enchantment.firstmod.lightning_striker": "Lightning Striker",
+
   "block.firstmod.alexandrite_block": "Block of Alexandrite",
   "block.firstmod.raw_alexandrite_block": "Block of Raw Alexandrite",
   "block.firstmod.alexandrite_ore": "Alexandrite Ore",

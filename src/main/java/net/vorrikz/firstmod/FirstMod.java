@@ -17,6 +17,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.component.ModDataComponentTypes;
 import net.vorrikz.firstmod.effect.ModEffects;
+import net.vorrikz.firstmod.enchantment.ModEnchantmentEffects;
+import net.vorrikz.firstmod.enchantment.ModEnchantments;
 import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
 import net.vorrikz.firstmod.potion.ModPotions;
@@ -56,6 +58,9 @@ public class FirstMod {
         ModEffects.register(modEventBus);
         // Register the potions with the event bus
         ModPotions.register(modEventBus);
+
+        // Register the enchantment effects with the event bus
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register the items to a creative tab
         modEventBus.addListener(this::addCreative);
