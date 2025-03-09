@@ -3,22 +3,22 @@
   "category": "equipment",
   "key": {
     "A": {
-      "item": "firstmod:alexandrite"
+      "item": "minecraft:breeze_rod"
     },
     "B": {
-      "item": "firstmod:alexandrite_block"
+      "item": "firstmod:alexandrite"
     },
     "C": {
-      "item": "minecraft:breeze_rod"
+      "item": "minecraft:string"
     }
   },
   "pattern": [
-    "ABA",
-    "ABA",
-    " C "
+    " BC",
+    "A C",
+    " BC"
   ],
   "result": {
     "count": 1,
-    "id": "firstmod:alexandrite_hammer"
+    "id": "firstmod:vorrik_bow"
   }
 }

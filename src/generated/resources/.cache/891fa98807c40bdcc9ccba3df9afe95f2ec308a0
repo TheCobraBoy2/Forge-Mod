@@ -1,4 +1,4 @@
-// 1.21	2025-03-09T14:57:13.7796981	Item Models: firstmod
+// 1.21	2025-03-09T16:50:18.3932498	Item Models: firstmod
 277d23d82cc594e89a3be1f963c9a3e9ab9e2e89 assets/firstmod/models/item/alexandrite.json
 b7dd8e73135f0ac5695b9f631008bd5b4b179921 assets/firstmod/models/item/alexandrite_axe.json
 247a5031fce43734e6f0c0fafc2ca8963e93b0d6 assets/firstmod/models/item/alexandrite_boots.json
@@ -56,5 +56,6 @@ d8e40ef25211c1ea82305a5ce3d31a8b6e3cea0b assets/firstmod/models/item/alexandrite
 69a8c3127dd7d7bdc472935c72713e6e0691a2a0 assets/firstmod/models/item/alexandrite_sword.json
 970f3a7cdf05373127970ea951ca79709eefb2fe assets/firstmod/models/item/alexandrite_wall.json
 e88b814b5b38b23461928139cfeab418f723b013 assets/firstmod/models/item/aurora_ashes.json
+1683a99891f1abafd5bf4ed18bad6d6877d66ff8 assets/firstmod/models/item/bar_brawl_music_disc.json
 a967a11b747490acf632a0f89c1481c5f7522779 assets/firstmod/models/item/kohlrabi.json
 53d9e2b2ec35e34410c8b78caeede8c01e1865f7 assets/firstmod/models/item/raw_alexandrite.json

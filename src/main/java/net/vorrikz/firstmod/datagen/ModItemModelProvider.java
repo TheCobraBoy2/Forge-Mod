@@ -130,6 +130,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Animal Armor
         basicItem(ModItems.ALEXANDRITE_HORSE_AROMOR.get());
+
+        // Music disc
+        basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
     }
 
     // Helper method for tools / hand held items

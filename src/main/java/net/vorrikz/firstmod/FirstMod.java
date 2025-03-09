@@ -16,6 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.component.ModDataComponentTypes;
+import net.vorrikz.firstmod.effect.ModEffects;
 import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
 import net.vorrikz.firstmod.sound.ModSounds;
@@ -49,6 +50,9 @@ public class FirstMod {
 
         // Register the sounds with the event bus
         ModSounds.register(modEventBus);
+
+        // Register the effects with the event bus
+        ModEffects.register(modEventBus);
 
         // Register the items to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -88,6 +92,7 @@ public class FirstMod {
             event.accept(ModItems.ALEXANDRITE_HOE);
             event.accept(ModItems.ALEXANDRITE_SHOVEL);
             event.accept(ModItems.ALEXANDRITE_HAMMER);
+            event.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
         }
 
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {

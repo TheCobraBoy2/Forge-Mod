@@ -11,6 +11,7 @@ import net.vorrikz.firstmod.item.custom.FuelItem;
 import net.vorrikz.firstmod.item.custom.ChiselItem;
 import net.vorrikz.firstmod.item.custom.HammerItem;
 import net.vorrikz.firstmod.item.custom.ModArmorItem;
+import net.vorrikz.firstmod.sound.ModSounds;
 
 import java.util.List;
 
@@ -81,6 +82,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> VORRIK_BOW = ITEMS.register("vorrik_bow",
             () -> new BowItem(new Item.Properties().durability(500)));
+
+    public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
+            () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)));
 
     // Method to register the items
     public static void register(IEventBus eventBus) {

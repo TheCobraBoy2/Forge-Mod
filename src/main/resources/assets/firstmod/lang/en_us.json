@@ -23,6 +23,11 @@
 
   "item.firstmod.vorrik_bow": "Vorrik Bow",
 
+  "item.firstmod.bar_brawl_music_disc": "Bar Brawn Music Disc",
+  "item.firstmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawn (CC0)",
+
+  "effect.firstmod.slimey": "Slimey",
+
   "block.firstmod.alexandrite_block": "Block of Alexandrite",
   "block.firstmod.raw_alexandrite_block": "Block of Raw Alexandrite",
   "block.firstmod.alexandrite_ore": "Alexandrite Ore",

@@ -17,6 +17,7 @@ import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.item.ModItems;
 import net.minecraft.world.item.crafting.*;
+import org.spongepowered.asm.mixin.MixinEnvironment;
 
 
 import java.util.List;
@@ -62,16 +63,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModItems.CHISEL.get())
                 .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get()))
                 .save(recipeOutput);
-        RecipeUtil.axe(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_AXE);
-        RecipeUtil.hoe(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_HOE);
-        RecipeUtil.pickaxe(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_PICKAXE);
-        RecipeUtil.sword(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_SWORD);
-        RecipeUtil.shovel(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_SHOVEL);
-        RecipeUtil.hammer(recipeOutput, ModItems.ALEXANDRITE, ModBlocks.ALEXANDRITE_BLOCK, ModItems.ALEXANDRITE_HAMMER);
+        RecipeUtil.axe(recipeOutput, ModItems.ALEXANDRITE.get(), Items.STICK, ModItems.ALEXANDRITE_AXE);
+        RecipeUtil.hoe(recipeOutput, ModItems.ALEXANDRITE.get(), Items.STICK, ModItems.ALEXANDRITE_HOE);
+        RecipeUtil.pickaxe(recipeOutput, ModItems.ALEXANDRITE.get(), Items.STICK, ModItems.ALEXANDRITE_PICKAXE);
+        RecipeUtil.sword(recipeOutput, ModItems.ALEXANDRITE.get(), Items.STICK, ModItems.ALEXANDRITE_SWORD);
+        RecipeUtil.shovel(recipeOutput, ModItems.ALEXANDRITE.get(), Items.STICK, ModItems.ALEXANDRITE_SHOVEL);
+        RecipeUtil.hammer(recipeOutput, ModItems.ALEXANDRITE.get(), ModBlocks.ALEXANDRITE_BLOCK.get(), Items.BREEZE_ROD, ModItems.ALEXANDRITE_HAMMER);
         RecipeUtil.helmet(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_HELMET);
         RecipeUtil.chestplate(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_CHESTPLATE);
         RecipeUtil.leggings(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_LEGGINGS);
         RecipeUtil.boots(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_BOOTS);
+        RecipeUtil.bow(recipeOutput, Items.BREEZE_ROD, ModItems.ALEXANDRITE.get(), Items.STRING, ModItems.VORRIK_BOW);
 
         // Shapeless recipes
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
@@ -128,23 +130,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             super(p_248933_, p_333797_);
         }
         // Tools
-        public static void axe(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("AA ").pattern("AB ").pattern(" B ").define('A', material.get()).define('B', Items.STICK).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
+        public static void axe(RecipeOutput recipeOutput, Item material, Item materialHandle, RegistryObject<Item> result) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("AA ").pattern("AB ").pattern(" B ").define('A', material).define('B', materialHandle).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
         }
-        public static void hoe(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("AA ").pattern(" B ").pattern(" B ").define('A', material.get()).define('B', Items.STICK).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
+        public static void hoe(RecipeOutput recipeOutput, Item material, Item materialHandle, RegistryObject<Item> result) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("AA ").pattern(" B ").pattern(" B ").define('A', material).define('B', materialHandle).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
         }
-        public static void sword(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result.get()).pattern(" A ").pattern(" A ").pattern(" B ").define('A', material.get()).define('B', Items.STICK).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
+        public static void sword(RecipeOutput recipeOutput, Item material, Item materialHandle, RegistryObject<Item> result) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result.get()).pattern(" A ").pattern(" A ").pattern(" B ").define('A', material).define('B', materialHandle).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
         }
-        public static void pickaxe(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("AAA").pattern(" B ").pattern(" B ").define('A', material.get()).define('B', Items.STICK).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
+        public static void pickaxe(RecipeOutput recipeOutput, Item material, Item materialHandle, RegistryObject<Item> result) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("AAA").pattern(" B ").pattern(" B ").define('A', material).define('B', materialHandle).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
         }
-        public static void shovel(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern(" A ").pattern(" B ").pattern(" B ").define('A', material.get()).define('B', Items.STICK).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
+        public static void shovel(RecipeOutput recipeOutput, Item material, Item materialHandle, RegistryObject<Item> result) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern(" A ").pattern(" B ").pattern(" B ").define('A', material).define('B', materialHandle).unlockedBy(getHasName(material), has(material)).save(recipeOutput);
         }
-        public static void hammer(RecipeOutput recipeOutput, RegistryObject<Item> materialItem, RegistryObject<Block> materialBlock, RegistryObject<Item> result) {
-            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("ABA").pattern("ABA").pattern(" C ").define('A', materialItem.get()).define('B', materialBlock.get()).define('C', Items.BLAZE_ROD).unlockedBy(getHasName(materialBlock.get()), has(materialBlock.get())).save(recipeOutput);
+        public static void hammer(RecipeOutput recipeOutput, Item materialItem, Block materialBlock, Item materialHandle, RegistryObject<Item> result) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result.get()).pattern("ABA").pattern("ABA").pattern(" C ").define('A', materialItem).define('B', materialBlock).define('C', materialHandle).unlockedBy(getHasName(materialBlock), has(materialBlock)).save(recipeOutput);
         }
         public static void helmet(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
             ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result.get()).pattern("AAA").pattern("A A").pattern("   ").define('A', material.get()).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
@@ -157,6 +159,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
         public static void boots(RecipeOutput recipeOutput, RegistryObject<Item> material, RegistryObject<Item> result) {
             ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result.get()).pattern("A A").pattern("A A").define('A', material.get()).unlockedBy(getHasName(material.get()), has(material.get())).save(recipeOutput);
+        }
+        public static void bow(RecipeOutput recipeOutput, Item handleMaterial, Item SideMaterial, Item BowString, RegistryObject<Item> result) {
+            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result.get()).pattern(" BC").pattern("A C").pattern(" BC").define('A', handleMaterial).define('B', SideMaterial).define('C', BowString).unlockedBy(getHasName(SideMaterial), has(SideMaterial)).save(recipeOutput);
         }
     }
 }
