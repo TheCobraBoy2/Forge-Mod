@@ -55,6 +55,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
                         output.accept(ModBlocks.ALEXANDRITE_BUTTON.get());
+
+                        output.accept(ModBlocks.ALEXANDRITE_LAMP.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

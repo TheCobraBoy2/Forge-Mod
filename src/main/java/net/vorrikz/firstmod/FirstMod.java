@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.component.ModDataComponentTypes;
 import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
 import org.slf4j.Logger;
@@ -41,6 +42,9 @@ public class FirstMod {
         // Register the mods blocks with the event bus
         ModBlocks.register(modEventBus);
 
+        // Register the data component types with the event bus
+        ModDataComponentTypes.register(modEventBus);
+
         // Register the items to a creative tab
         modEventBus.addListener(this::addCreative);
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
@@ -63,11 +67,6 @@ public class FirstMod {
             event.accept(ModItems.KOHLRABI);
         }
 
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
-            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
-        }
-
         if (event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
             event.accept(ModBlocks.MAGIC_BLOCK.get());
         }
@@ -85,7 +84,6 @@ public class FirstMod {
             event.accept(ModBlocks.ALEXANDRITE_BUTTON);
             event.accept(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);
             event.accept(ModBlocks.ALEXANDRITE_DOOR);
-            event.accept(ModBlocks.ALEXANDRITE_TRAPDOOR);
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -96,6 +94,14 @@ public class FirstMod {
             event.accept(ModBlocks.ALEXANDRITE_FENCE_GATE);
             event.accept(ModBlocks.ALEXANDRITE_STAIRS);
             event.accept(ModBlocks.ALEXANDRITE_SLAB);
+            event.accept(ModBlocks.ALEXANDRITE_LAMP);
+            event.accept(ModBlocks.ALEXANDRITE_LAMP);
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
+            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            event.accept(ModBlocks.ALEXANDRITE_LAMP);
         }
     }
 

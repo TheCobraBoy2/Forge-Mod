@@ -16,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.component.ModDataComponentTypes;
 
 import java.util.List;
 import java.util.Map;
@@ -55,6 +56,9 @@ public class ChiselItem extends Item {
 
                 // Play a sound
                 level.playSound(null, pContext.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+
+                // Set the COORDINATES data component type to the clicked position
+                pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
             }
         }
 
@@ -62,6 +66,7 @@ public class ChiselItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
+    // Override the appendHoverText method to add a custom tooltip
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
         if (Screen.hasShiftDown()) {
@@ -69,6 +74,12 @@ public class ChiselItem extends Item {
         } else {
             pTooltipComponents.add(Component.translatable("tooltip.firstmod.chisel.tooltip"));
         }
+        // Check if there are coordinates on the COORDINATES data component type
+        if (pStack.get(ModDataComponentTypes.COORDINATES.get()) != null) {
+            // Add the coordinates of the last block changed
+            pTooltipComponents.add(Component.literal("Last block changed at " + pStack.get(ModDataComponentTypes.COORDINATES.get())));
+        }
+
         super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
     }
 }
