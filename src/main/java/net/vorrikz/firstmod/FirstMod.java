@@ -19,6 +19,7 @@ import net.vorrikz.firstmod.component.ModDataComponentTypes;
 import net.vorrikz.firstmod.effect.ModEffects;
 import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
+import net.vorrikz.firstmod.potion.ModPotions;
 import net.vorrikz.firstmod.sound.ModSounds;
 import net.vorrikz.firstmod.util.ModItemProperties;
 import org.slf4j.Logger;
@@ -53,6 +54,8 @@ public class FirstMod {
 
         // Register the effects with the event bus
         ModEffects.register(modEventBus);
+        // Register the potions with the event bus
+        ModPotions.register(modEventBus);
 
         // Register the items to a creative tab
         modEventBus.addListener(this::addCreative);
