@@ -11,4 +11,10 @@ public class ModFoodProperties {
                     .nutrition(3)
                     .saturationModifier(0.25f)
                     .m_38762_(new MobEffectInstance(MobEffects.INVISIBILITY, 400), 0.10f).build();
+
+    // I think the .m_38766_ is .fast not certain though
+    public static final FoodProperties HONEY_BERRY =
+            new FoodProperties.Builder()
+                    .nutrition(2)
+                    .saturationModifier(0.15f).m_38766_().build();
 }

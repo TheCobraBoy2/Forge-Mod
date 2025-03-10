@@ -1,4 +1,4 @@
-// 1.21	2025-03-09T19:32:39.324599	Loot Tables
+// 1.21	2025-03-09T19:59:56.2909783	Loot Tables
 c7f946211fdb4db8a4a620a357e1e78d72380826 data/firstmod/loot_table/blocks/alexandrite_block.json
 35da426b8427a21fb1f5c0fb3f24967e2fd66022 data/firstmod/loot_table/blocks/alexandrite_button.json
 1d0e7c46d1a1b4b17dc5bc54d9830b5c33d1bca2 data/firstmod/loot_table/blocks/alexandrite_deepslate_ore.json
@@ -12,6 +12,7 @@ d19075a05735b16c2d96ce4cf8c388a504962aff data/firstmod/loot_table/blocks/alexand
 5beb9d66769254de7696bc9d9bb70b99814ac461 data/firstmod/loot_table/blocks/alexandrite_stairs.json
 cae4fbcc4d9049345585b7f00a035c29659a265b data/firstmod/loot_table/blocks/alexandrite_trapdoor.json
 a6008e6d1dde798478842aa37382950537ed5260 data/firstmod/loot_table/blocks/alexandrite_wall.json
+2f8582f52d61b1ff446f9b5a67b46cf726d6cc9e data/firstmod/loot_table/blocks/honey_berry_bush.json
 e43cf72e808d4a1ceeeac6db1b8d70b77b9bb24a data/firstmod/loot_table/blocks/kohlrabi_crop.json
 db1fa49d36624555abfffb1bffd5484841cbc6c5 data/firstmod/loot_table/blocks/magic_block.json
 b5f8c433188b05d93b32a3ec284efcd2f095908f data/firstmod/loot_table/blocks/raw_alexandrite_block.json

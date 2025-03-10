@@ -136,6 +136,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Seeds
         basicItem(ModItems.KOHLRABI_SEEDS.get());
+
+        // Berries
+        basicItem(ModItems.HONEY_BERRIES.get());
     }
 
     // Helper method for tools / hand held items

@@ -19,9 +19,11 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> ALEXANDRITE_ITEMS_TAB = CREATIVE_MODE_TABS.register("alexandrite_items_tab",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModItems.CHISEL.get()))
-                    .title(Component.translatable("creativetab.firstmod.alexandrite_items"))
-                    // Add items to the custom ALEXANDRITE_ITEMS_TAB creative tab
+                    .title(Component.translatable("creativetab.firstmod.first_mod"))
+                    // Add items and blocks to the custom first_mod creative tab
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        // Items
                         output.accept(ModItems.CHISEL.get());
 
                         output.accept(ModItems.ALEXANDRITE.get());
@@ -51,15 +53,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
 
                         output.accept(ModItems.KOHLRABI_SEEDS.get());
-                    }).build());
 
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
-            () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
-                    .withTabsBefore(ALEXANDRITE_ITEMS_TAB.getId())
-                    .title(Component.translatable("creativetab.firstmod.alexandrite_blocks"))
-                    // Add blocks to the custom ALEXANDRITE_BLOCKS_TAB creative tab
-                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.HONEY_BERRIES.get());
+
+
+                        // Blocks
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
 
