@@ -1,15 +1,20 @@
-// 1.21	2025-03-09T06:07:56.0440525	Tags for minecraft:block mod id firstmod
+// 1.21	2025-03-10T00:34:47.5725042	Tags for minecraft:block mod id firstmod
 3fa2732c0db9a9142fb1f3f0be031ab5d3075f0f data/firstmod/tags/block/incorrect_for_alexandrite_tool.json
+6efbce6ceac87bf89aeab2ed7629b9c8071e5dbd data/firstmod/tags/block/incorrect_for_bismuth_tool.json
 aa6e018a53879d76ca1efd35cf30cfa1239b69d4 data/firstmod/tags/block/needs_alexandrite_tool.json
-9ed26f590709b1126c90ec3f0bb0799abaa2ef93 data/minecraft/tags/block/buttons.json
-81c25747447be5fe88ccbbf209ae27d1afc99318 data/minecraft/tags/block/doors.json
-fdf39e12c4677222e46846db4e92b2e161c45592 data/minecraft/tags/block/fences.json
-44ba5d031939d124e0008cfdbc41367b3a2db98d data/minecraft/tags/block/fence_gates.json
-23c2436bab69523cd5cc939dc400dd90c6c33f2d data/minecraft/tags/block/mineable/pickaxe.json
-7d113f2ce543f11c718e3106e43ae327b11a6687 data/minecraft/tags/block/needs_diamond_tool.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data/firstmod/tags/block/needs_bismuth_tool.json
+aa141e4ea916442a52be0641f3dedfad59265575 data/minecraft/tags/block/buttons.json
+975958e8d8099af8fe50433728975fc32885083f data/minecraft/tags/block/doors.json
+a58da11c153b68c6d31eb78880c0094d338afeed data/minecraft/tags/block/fences.json
+c5e9c12dc8739c8009c6363d18354fb09751489a data/minecraft/tags/block/fence_gates.json
+818c79062c2fed818a8326fc20770854ce0ee3b9 data/minecraft/tags/block/leaves.json
+1e31a07c6594ce034b5b8c85200eb91bf0ef1564 data/minecraft/tags/block/logs.json
+1e31a07c6594ce034b5b8c85200eb91bf0ef1564 data/minecraft/tags/block/logs_that_burn.json
+542297b87475f6cc4e9e25d37bc13e4cffb5f7ba data/minecraft/tags/block/mineable/pickaxe.json
+2523895490131ef5855887336e6326e3928aa207 data/minecraft/tags/block/needs_diamond_tool.json
 18b52cc407b583f4561e795af1ffcd7772ecf19f data/minecraft/tags/block/needs_iron_tool.json
-ebdc4c897d845b0e7ea7a98ae8625f08c5940c04 data/minecraft/tags/block/pressure_plates.json
-2b77e8b6bde32ab4c32e92738df9ba940d2b450d data/minecraft/tags/block/slabs.json
-e61335576448821c2c1b422bc792bf3e3f177acc data/minecraft/tags/block/stairs.json
-90510dafb8116ea53932c1ef6d88b78dae25f8df data/minecraft/tags/block/trapdoors.json
-886f7340a3121294da66809fd28a192fe1b488ad data/minecraft/tags/block/walls.json
+5e5cddf0e5c40ba675f2f4c63c18c5211bb57125 data/minecraft/tags/block/pressure_plates.json
+17316d37c0275c92f8b01d11c2686accf96d5e26 data/minecraft/tags/block/slabs.json
+3b5e89a67e549ae232457e4507641f39c312336c data/minecraft/tags/block/stairs.json
+cfbe34258629d82880b181313b58d5ffcbb9ed9e data/minecraft/tags/block/trapdoors.json
+334bcd677b05bba0f78f83fde5a0c998543576a3 data/minecraft/tags/block/walls.json

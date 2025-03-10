@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "firstmod:bismuth"
+    },
+    "B": {
+      "item": "firstmod:bismuth_block"
+    },
+    "C": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "ABA",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "firstmod:bismuth_hammer"
+  }
+}

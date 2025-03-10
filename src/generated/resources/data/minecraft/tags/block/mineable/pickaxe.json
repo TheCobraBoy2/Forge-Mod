@@ -13,6 +13,17 @@
     "firstmod:alexandrite_button",
     "firstmod:alexandrite_trapdoor",
     "firstmod:alexandrite_lamp",
-    "firstmod:magic_block"
+    "firstmod:magic_block",
+    "firstmod:bismuth_ore",
+    "firstmod:bismuth_door",
+    "firstmod:bismuth_fence",
+    "firstmod:bismuth_wall",
+    "firstmod:bismuth_fence_gate",
+    "firstmod:bismuth_stairs",
+    "firstmod:bismuth_pressure_plate",
+    "firstmod:bismuth_button",
+    "firstmod:bismuth_trapdoor",
+    "firstmod:bismuth_lamp",
+    "firstmod:bismuth_block"
   ]
 }

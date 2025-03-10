@@ -7,12 +7,15 @@
     },
     "B": {
       "item": "firstmod:chisel"
+    },
+    "C": {
+      "item": "firstmod:bismuth_block"
     }
   },
   "pattern": [
-    "AAA",
+    "CAC",
     "ABA",
-    "AAA"
+    "CAC"
   ],
   "result": {
     "count": 1,

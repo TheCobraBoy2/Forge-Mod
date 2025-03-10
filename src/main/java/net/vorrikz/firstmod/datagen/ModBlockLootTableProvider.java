@@ -23,6 +23,7 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.block.custom.KohlrabiCropBlock;
+import net.vorrikz.firstmod.block.custom.RadishCropBlock;
 import net.vorrikz.firstmod.item.ModItems;
 
 import java.util.Set;
@@ -35,17 +36,33 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         // Set drop tables for blocks that only drop themselves
-        dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
-        dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
-        dropSelf(ModBlocks.MAGIC_BLOCK.get());
-        dropSelf(ModBlocks.ALEXANDRITE_STAIRS.get());
-        dropSelf(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
-        dropSelf(ModBlocks.ALEXANDRITE_BUTTON.get());
-        dropSelf(ModBlocks.ALEXANDRITE_FENCE.get());
-        dropSelf(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
-        dropSelf(ModBlocks.ALEXANDRITE_WALL.get());
-        dropSelf(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
-        dropSelf(ModBlocks.ALEXANDRITE_LAMP.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_BLOCK.get());
+        this.dropSelf(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+        this.dropSelf(ModBlocks.MAGIC_BLOCK.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_STAIRS.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_BUTTON.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_FENCE.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_WALL.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.ALEXANDRITE_LAMP.get());
+        this.dropSelf(ModBlocks.WALNUT_LOG.get());
+        this.dropSelf(ModBlocks.WALNUT_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_WALNUT_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_WALNUT_LOG.get());
+        this.dropSelf(ModBlocks.WALNUT_SAPLING.get());
+        this.dropSelf(ModBlocks.WALNUT_PLANKS.get());
+        this.dropSelf(ModBlocks.BISMUTH_BLOCK.get());
+        this.dropSelf(ModBlocks.BISMUTH_FENCE.get());
+        this.dropSelf(ModBlocks.BISMUTH_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.BISMUTH_BUTTON.get());
+        this.dropSelf(ModBlocks.BISMUTH_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BISMUTH_STAIRS.get());
+        this.dropSelf(ModBlocks.BISMUTH_WALL.get());
+        this.dropSelf(ModBlocks.BISMUTH_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.BISMUTH_LAMP.get());
+
 
         // Add drop tables for blocks that don't drop themselves
         this.add(ModBlocks.ALEXANDRITE_ORE.get(),
@@ -57,15 +74,33 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.ALEXANDRITE_NETHER_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_NETHER_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 6));
 
+        this.add(ModBlocks.BISMUTH_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.BISMUTH_ORE.get(), ModItems.RAW_BISMUTH.get(), 1, 2));
+        this.add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.BISMUTH_DEEPSLATE_ORE.get(), ModItems.RAW_BISMUTH.get(), 3, 7));
+        this.add(ModBlocks.BISMUTH_END_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.BISMUTH_END_ORE.get(), ModItems.RAW_BISMUTH.get(), 5, 8));
+        this.add(ModBlocks.BISMUTH_NETHER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.BISMUTH_NETHER_ORE.get(), ModItems.RAW_BISMUTH.get(), 1, 6));
+
         this.add(ModBlocks.ALEXANDRITE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.ALEXANDRITE_SLAB.get()));
 
         this.add(ModBlocks.ALEXANDRITE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.ALEXANDRITE_DOOR.get()));
 
+        this.add(ModBlocks.BISMUTH_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.BISMUTH_SLAB.get()));
+
+        this.add(ModBlocks.BISMUTH_DOOR.get(),
+                block -> createDoorTable(ModBlocks.BISMUTH_DOOR.get()));
+
         // Add drop tables for blocks with conditions
         this.add(ModBlocks.KOHLRABI_CROP.get(), this.createCropDrops(ModBlocks.KOHLRABI_CROP.get(),
                 ModItems.KOHLRABI.get(), ModItems.KOHLRABI_SEEDS.get(), cropCondtionBuilder(ModBlocks.KOHLRABI_CROP.get(), KohlrabiCropBlock.AGE, KohlrabiCropBlock.MAX_AGE)));
+
+        this.add(ModBlocks.RADISH_CROP.get(), this.createCropDrops(ModBlocks.RADISH_CROP.get(),
+                ModItems.RADISH.get(), ModItems.RADISH_SEEDS.get(), cropCondtionBuilder(ModBlocks.RADISH_CROP.get(), RadishCropBlock.AGE, RadishCropBlock.MAX_AGE)));
 
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.m_255025_(Registries.ENCHANTMENT);
         this.add(ModBlocks.HONEY_BERRY_BUSH.get(), block -> this.applyExplosionDecay(
@@ -82,6 +117,23 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
                 )));
+        this.add(ModBlocks.GOJI_BERRY_BUSH.get(), block -> this.applyExplosionDecay(
+                block,LootTable.lootTable().withPool(LootPool.lootPool().when(
+                                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.GOJI_BERRY_BUSH.get())
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SweetBerryBushBlock.AGE, 3))
+                                ).add(LootItem.lootTableItem(ModItems.GOJI_BERRIES.get()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                ).withPool(LootPool.lootPool().when(
+                                        LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.GOJI_BERRY_BUSH.get())
+                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SweetBerryBushBlock.AGE, 2))
+                                ).add(LootItem.lootTableItem(ModItems.GOJI_BERRIES.get()))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
+                                .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE)))
+                )));
+
+        this.add(ModBlocks.WALNUT_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.WALNUT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     // Helper method for crops

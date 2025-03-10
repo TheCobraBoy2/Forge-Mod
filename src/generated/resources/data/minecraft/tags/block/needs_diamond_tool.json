@@ -1,6 +1,17 @@
 {
   "values": [
     "firstmod:magic_block",
-    "firstmod:alexandrite_deepslate_ore"
+    "firstmod:alexandrite_deepslate_ore",
+    "firstmod:bismuth_ore",
+    "firstmod:bismuth_door",
+    "firstmod:bismuth_fence",
+    "firstmod:bismuth_wall",
+    "firstmod:bismuth_fence_gate",
+    "firstmod:bismuth_stairs",
+    "firstmod:bismuth_pressure_plate",
+    "firstmod:bismuth_button",
+    "firstmod:bismuth_trapdoor",
+    "firstmod:bismuth_lamp",
+    "firstmod:bismuth_block"
   ]
 }

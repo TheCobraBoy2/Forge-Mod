@@ -48,6 +48,28 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.ALEXANDRITE_HORSE_AROMOR.get());
 
+                        output.accept(ModItems.BISMUTH.get());
+                        output.accept(ModItems.RAW_BISMUTH.get());
+
+                        output.accept(ModItems.RADISH.get());
+
+                        output.accept(ModItems.STARLIGHT_ASHES.get());
+
+                        output.accept(ModItems.BISMUTH_SWORD.get());
+                        output.accept(ModItems.BISMUTH_AXE.get());
+                        output.accept(ModItems.BISMUTH_HOE.get());
+                        output.accept(ModItems.BISMUTH_PICKAXE.get());
+                        output.accept(ModItems.BISMUTH_SHOVEL.get());
+
+                        output.accept(ModItems.BISMUTH_HAMMER.get());
+
+                        output.accept(ModItems.BISMUTH_BOOTS.get());
+                        output.accept(ModItems.BISMUTH_HELMET.get());
+                        output.accept(ModItems.BISMUTH_LEGGINGS.get());
+                        output.accept(ModItems.BISMUTH_CHESTPLATE.get());
+
+                        output.accept(ModItems.BISMUTH_HORSE_AROMOR.get());
+
                         output.accept(ModItems.VORRIK_BOW.get());
 
                         output.accept(ModItems.BAR_BRAWL_MUSIC_DISC.get());
@@ -55,6 +77,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KOHLRABI_SEEDS.get());
 
                         output.accept(ModItems.HONEY_BERRIES.get());
+
+                        output.accept(ModItems.RADISH_SEEDS.get());
+
+                        output.accept(ModItems.GOJI_BERRIES.get());
 
 
                         // Blocks
@@ -82,6 +108,36 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_BUTTON.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_LAMP.get());
+
+                        output.accept(ModBlocks.BISMUTH_BLOCK.get());
+
+                        output.accept(ModBlocks.BISMUTH_ORE.get());
+                        output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.BISMUTH_NETHER_ORE.get());
+                        output.accept(ModBlocks.BISMUTH_END_ORE.get());
+
+                        output.accept(ModBlocks.BISMUTH_STAIRS.get());
+                        output.accept(ModBlocks.BISMUTH_SLAB.get());
+
+                        output.accept(ModBlocks.BISMUTH_DOOR.get());
+                        output.accept(ModBlocks.BISMUTH_TRAPDOOR.get());
+
+                        output.accept(ModBlocks.BISMUTH_WALL.get());
+                        output.accept(ModBlocks.BISMUTH_FENCE.get());
+                        output.accept(ModBlocks.BISMUTH_FENCE_GATE.get());
+
+                        output.accept(ModBlocks.BISMUTH_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.BISMUTH_BUTTON.get());
+
+                        output.accept(ModBlocks.BISMUTH_LAMP.get());
+
+                        output.accept(ModBlocks.WALNUT_LEAVES.get());
+                        output.accept(ModBlocks.WALNUT_SAPLING.get());
+                        output.accept(ModBlocks.WALNUT_PLANKS.get());
+                        output.accept(ModBlocks.WALNUT_LOG.get());
+                        output.accept(ModBlocks.WALNUT_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_WALNUT_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_WALNUT_LOG.get());
                     }).build());
 
     public static void register(IEventBus eventBus) {

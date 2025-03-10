@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "firstmod:stripped_walnut_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "firstmod:walnut_planks"
+  }
+}

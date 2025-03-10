@@ -25,7 +25,16 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.CHESTPLATE, 9);
                 attribute.put(ArmorItem.Type.HELMET, 5);
                 attribute.put(ArmorItem.Type.BODY, 11);
-            }), 15, 4f, 0.1f, () -> ModItems.ALEXANDRITE.get(), SoundEvents.ARMOR_EQUIP_NETHERITE);
+            }), 15, 4f, 0.1f, () -> ModItems.ALEXANDRITE.get(), SoundEvents.ARMOR_EQUIP_DIAMOND);
+
+    public static final Holder<ArmorMaterial> BISMUTH_AROMOR_MATERIAL = register("bismuth", Util.make(new EnumMap<>(ArmorItem.Type.class),
+            attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 7);
+                attribute.put(ArmorItem.Type.LEGGINGS, 9);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 13);
+                attribute.put(ArmorItem.Type.HELMET, 7);
+                attribute.put(ArmorItem.Type.BODY, 15);
+            }), 15, 4f, 0.1f, () -> ModItems.BISMUTH.get(), SoundEvents.ARMOR_EQUIP_NETHERITE);
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, float toughness, float knockbackRsistance,

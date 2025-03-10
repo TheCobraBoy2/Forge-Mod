@@ -1,3 +1,11 @@
-// 1.21	2025-03-09T07:33:01.5502276	Tags for minecraft:item mod id firstmod
+// 1.21	2025-03-10T00:34:47.578557	Tags for minecraft:item mod id firstmod
 fe7c57491bce0446f22557a995b156eabb7cd3eb data/firstmod/tags/item/transformable_items.json
-c8dd46ffac9848cea3c0bf14ae7fd0c46f1839ad data/minecraft/tags/item/trimmable_armor.json
+a9d76aff6ee14887512f3e62d1d9ca9ba3676f62 data/minecraft/tags/item/axes.json
+fe6af0b3994149e61f94974381f4f1f26f9349b9 data/minecraft/tags/item/hoes.json
+1e31a07c6594ce034b5b8c85200eb91bf0ef1564 data/minecraft/tags/item/logs.json
+1e31a07c6594ce034b5b8c85200eb91bf0ef1564 data/minecraft/tags/item/logs_that_burn.json
+10e7f70d11baac45bb3ff1157ca849dcf506f599 data/minecraft/tags/item/pickaxes.json
+02c7d6250a337c1a102426ea71d373d6d04850e3 data/minecraft/tags/item/planks.json
+e215bc033fdb382985b7d517aa8003262a18b457 data/minecraft/tags/item/shovels.json
+ff550c3448179a1add22f9ddea204158d21066c1 data/minecraft/tags/item/swords.json
+aae63f586c78ed7242d14f692de6febdb00c9cec data/minecraft/tags/item/trimmable_armor.json

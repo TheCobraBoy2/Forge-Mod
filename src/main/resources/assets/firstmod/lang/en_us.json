@@ -2,6 +2,9 @@
   "item.firstmod.alexandrite": "Alexandrite",
   "item.firstmod.raw_alexandrite": "Raw Alexandrite",
 
+  "item.firstmod.bismuth": "Bismuth",
+  "item.firstmod.raw_bismuth": "Raw Bismuth",
+
   "item.firstmod.chisel": "Chisel",
 
   "item.firstmod.kohlrabi": "Kohlrabi",
@@ -10,6 +13,13 @@
   "item.firstmod.honey_berries": "Honey Berries",
 
   "item.firstmod.aurora_ashes": "Aurora Ashes",
+
+  "item.firstmod.radish": "Radish",
+  "item.firstmod.radish_seeds": "Radish Seeds",
+
+  "item.firstmod.goji_berries": "Goji Berries",
+
+  "item.firstmod.starlight_ashes": "Starlight Ashes",
 
   "item.firstmod.alexandrite_sword": "Alexandrite Sword",
   "item.firstmod.alexandrite_axe": "Alexandrite Axe",
@@ -25,6 +35,21 @@
   "item.firstmod.alexandrite_boots": "Alexandrite Boots",
 
   "item.firstmod.alexandrite_horse_armor": "Alexandrite Horse Armor",
+
+  "item.firstmod.bismuth_sword": "Bismuth Sword",
+  "item.firstmod.bismuth_axe": "Bismuth Axe",
+  "item.firstmod.bismuth_pickaxe": "Bismuth Pickaxe",
+  "item.firstmod.bismuth_shovel": "Bismuth Shovel",
+  "item.firstmod.bismuth_hoe": "Bismuth Hoe",
+
+  "item.firstmod.bismuth_hammer": "Bismuth Hammer",
+
+  "item.firstmod.bismuth_helmet": "Bismuth Helmet",
+  "item.firstmod.bismuth_chestplate": "Bismuth Chestplate",
+  "item.firstmod.bismuth_leggings": "Bismuth Leggings",
+  "item.firstmod.bismuth_boots": "Bismuth Boots",
+
+  "item.firstmod.bismuth_horse_armor": "Bismuth Horse Armor",
 
   "item.firstmod.vorrik_bow": "Vorrik Bow",
 
@@ -54,7 +79,21 @@
   "block.firstmod.alexandrite_ore": "Alexandrite Ore",
   "block.firstmod.alexandrite_deepslate_ore": "Deepslate Alexandrite Ore",
   "block.firstmod.alexandrite_end_ore": "End Alexandrite Ore",
-  "block.firstmod.alexandrite_enther_ore": "Nether Alexandrite Ore",
+  "block.firstmod.alexandrite_nether_ore": "Nether Alexandrite Ore",
+
+  "block.firstmod.bismuth_block": "Block of Bismuth",
+
+  "block.firstmod.bismuth_ore": "Bismuth Ore",
+  "block.firstmod.bismuth_deepslate_ore": "Deepslate Bismuth Ore",
+  "block.firstmod.bismuth_end_ore": "End Bismuth Ore",
+  "block.firstmod.bismuth_nether_ore": "Nether Bismuth Ore",
+
+  "block.firstmod.walnut_log": "Walnut Log",
+  "block.firstmod.walnut_wood": "Walnut Wood",
+  "block.firstmod.stripped_walnut_log": "Stripped Walnut Log",
+  "block.firstmod.stripped_walnut_wood": "Stripped Walnut Wood",
+  "block.firstmod.walnut_planks": "Walnut Planks",
+  "block.firstmod.walnut_leaves": "Walnut Leaves",
 
   "block.firstmod.magic_block": "Magic Block",
 
@@ -73,9 +112,28 @@
 
   "block.firstmod.alexandrite_lamp": "Alexandrite Lamp",
 
+  "block.firstmod.bismuth_stairs": "Bismuth Stairs",
+  "block.firstmod.bismuth_slab": "Bismuth Slab",
+
+  "block.firstmod.bismuth_button": "Bismuth Button",
+  "block.firstmod.bismuth_pressure_plate": "Bismuth Pressure Plate",
+
+  "block.firstmod.bismuth_fence": "Bismuth Fence",
+  "block.firstmod.bismuth_fence_gate": "Bismuth Fence Gate",
+  "block.firstmod.bismuth_wall": "Bismuth Wall",
+
+  "block.firstmod.bismuth_door": "Bismuth Door",
+  "block.firstmod.bismuth_trapdoor": "Bismuth Trapdoor",
+
+  "block.firstmod.bismuth_lamp": "Bismuth Lamp",
+
   "block.firstmod.kohlrabi_crop": "Kohlrabi Crop",
 
   "block.firstmod.honey_berry_bush": "Honey Berry Bush",
+
+  "block.firstmod.radish_crop": "Radish Crop",
+
+  "block.firstmod.goji_berry_bush": "Goji Berry Bush",
 
   "creativetab.firstmod.first_mod": "First Mod Items",
 
@@ -84,5 +142,6 @@
   "tooltip.firstmod.chisel.tooltip.shift": "This Item changes certain blocks",
   "tooltip.firstmod.chisel.tooltip": "Press §eShift§r for more information!",
 
-  "tooltip.firstmod.kohlrabi.tooltip": "This tastes GREAT!"
+  "tooltip.firstmod.kohlrabi.tooltip": "This tastes GREAT!",
+  "tooltip.firstmod.radish.tooltip": "This tastes like POO!"
 }

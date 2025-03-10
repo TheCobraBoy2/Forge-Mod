@@ -93,11 +93,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.ALEXANDRITE.get());
         basicItem(ModItems.RAW_ALEXANDRITE.get());
 
+        basicItem(ModItems.BISMUTH.get());
+        basicItem(ModItems.RAW_BISMUTH.get());
+
         // Fuels
         basicItem(ModItems.AURORA_ASHES.get());
 
+        basicItem(ModItems.STARLIGHT_ASHES.get());
+
         // Foods
         basicItem(ModItems.KOHLRABI.get());
+
+        basicItem(ModItems.RADISH.get());
 
         // Advanced items
         // basicItem(ModItems.CHISEL.get()); Handled manually for custom item properties
@@ -105,14 +112,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         // Buttons
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);
 
+        buttonItem(ModBlocks.BISMUTH_BUTTON, ModBlocks.BISMUTH_BLOCK);
+
         // Fences
         fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
+
+        fenceItem(ModBlocks.BISMUTH_FENCE, ModBlocks.BISMUTH_BLOCK);
 
         // Walls
         wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
 
+        wallItem(ModBlocks.BISMUTH_WALL, ModBlocks.BISMUTH_BLOCK);
+
         // Doors
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
+
+        simpleBlockItem(ModBlocks.BISMUTH_DOOR);
 
         // Tools
         handheldItem(ModItems.ALEXANDRITE_SWORD);
@@ -122,14 +137,28 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALEXANDRITE_HOE);
         handheldItem(ModItems.ALEXANDRITE_HAMMER);
 
+        handheldItem(ModItems.BISMUTH_SWORD);
+        handheldItem(ModItems.BISMUTH_SHOVEL);
+        handheldItem(ModItems.BISMUTH_AXE);
+        handheldItem(ModItems.BISMUTH_PICKAXE);
+        handheldItem(ModItems.BISMUTH_HOE);
+        handheldItem(ModItems.BISMUTH_HAMMER);
+
         // Armor
         trimmedArmorItem(ModItems.ALEXANDRITE_HELMET);
         trimmedArmorItem(ModItems.ALEXANDRITE_CHESTPLATE);
         trimmedArmorItem(ModItems.ALEXANDRITE_LEGGINGS);
         trimmedArmorItem(ModItems.ALEXANDRITE_BOOTS);
 
+        trimmedArmorItem(ModItems.BISMUTH_HELMET);
+        trimmedArmorItem(ModItems.BISMUTH_CHESTPLATE);
+        trimmedArmorItem(ModItems.BISMUTH_LEGGINGS);
+        trimmedArmorItem(ModItems.BISMUTH_BOOTS);
+
         // Animal Armor
         basicItem(ModItems.ALEXANDRITE_HORSE_AROMOR.get());
+
+        basicItem(ModItems.BISMUTH_HORSE_AROMOR.get());
 
         // Music disc
         basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
@@ -137,8 +166,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         // Seeds
         basicItem(ModItems.KOHLRABI_SEEDS.get());
 
+        basicItem(ModItems.RADISH_SEEDS.get());
+
         // Berries
         basicItem(ModItems.HONEY_BERRIES.get());
+
+        basicItem(ModItems.GOJI_BERRIES.get());
+
+        // Saplings
+        saplingItem(ModBlocks.WALNUT_SAPLING);
+    }
+
+    // Helper method for saplings
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     // Helper method for tools / hand held items

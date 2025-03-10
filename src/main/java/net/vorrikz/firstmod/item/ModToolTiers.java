@@ -14,4 +14,13 @@ public class ModToolTiers {
             ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL,
             () -> Ingredient.of(ModItems.ALEXANDRITE.get()),
             ModTags.Blocks.INCORRECT_FOR_ALEXANDRITE_TOOL);
+
+    public static final Tier BISMUTH = new ForgeTier(
+            2500,
+            5,
+            4f,
+            30,
+            ModTags.Blocks.NEEDS_BISMUTH_TOOL,
+            () -> Ingredient.of(ModItems.BISMUTH.get()),
+            ModTags.Blocks.INCORRECT_FOR_BISMUTH_TOOL);
 }

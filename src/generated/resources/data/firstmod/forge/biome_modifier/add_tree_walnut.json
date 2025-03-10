@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:savanna"
+  ],
+  "features": "firstmod:walnut_places",
+  "step": "vegetal_decoration"
+}

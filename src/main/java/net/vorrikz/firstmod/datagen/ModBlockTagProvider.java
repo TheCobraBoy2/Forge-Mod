@@ -37,12 +37,34 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_BUTTON.get())
                 .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get())
                 .add(ModBlocks.ALEXANDRITE_LAMP.get())
-                .add(ModBlocks.MAGIC_BLOCK.get());
+                .add(ModBlocks.MAGIC_BLOCK.get())
+                .add(ModBlocks.BISMUTH_ORE.get())
+                .add(ModBlocks.BISMUTH_DOOR.get())
+                .add(ModBlocks.BISMUTH_FENCE.get())
+                .add(ModBlocks.BISMUTH_WALL.get())
+                .add(ModBlocks.BISMUTH_FENCE_GATE.get())
+                .add(ModBlocks.BISMUTH_STAIRS.get())
+                .add(ModBlocks.BISMUTH_PRESSURE_PLATE.get())
+                .add(ModBlocks.BISMUTH_BUTTON.get())
+                .add(ModBlocks.BISMUTH_TRAPDOOR.get())
+                .add(ModBlocks.BISMUTH_LAMP.get())
+                .add(ModBlocks.BISMUTH_BLOCK.get());
 
         // Add the blocks mineable only with a diamond tool to the NEEDS_DIAMOND_TOOL tag
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.MAGIC_BLOCK.get())
-                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+                .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BISMUTH_ORE.get())
+                .add(ModBlocks.BISMUTH_DOOR.get())
+                .add(ModBlocks.BISMUTH_FENCE.get())
+                .add(ModBlocks.BISMUTH_WALL.get())
+                .add(ModBlocks.BISMUTH_FENCE_GATE.get())
+                .add(ModBlocks.BISMUTH_STAIRS.get())
+                .add(ModBlocks.BISMUTH_PRESSURE_PLATE.get())
+                .add(ModBlocks.BISMUTH_BUTTON.get())
+                .add(ModBlocks.BISMUTH_TRAPDOOR.get())
+                .add(ModBlocks.BISMUTH_LAMP.get())
+                .add(ModBlocks.BISMUTH_BLOCK.get());
         // Add the blocks mineable only with an iron tool to the NEEDS_IRON_TOOL tag
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
@@ -63,36 +85,63 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
                 .add(Blocks.OBSIDIAN)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
+        tag(ModTags.Blocks.NEEDS_BISMUTH_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
         // Ensure all blocks not listed above and can't be mined by iron tools cant be mined by alexandrite tools
         tag(ModTags.Blocks.INCORRECT_FOR_ALEXANDRITE_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
                 .remove(ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL);
+        tag(ModTags.Blocks.INCORRECT_FOR_BISMUTH_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_BISMUTH_TOOL);
         // Add the fences to the FENCES tag
         tag(BlockTags.FENCES)
-                .add(ModBlocks.ALEXANDRITE_FENCE.get());
+                .add(ModBlocks.ALEXANDRITE_FENCE.get())
+                .add(ModBlocks.BISMUTH_FENCE.get());
         // Add the fence gates to the FENCE_GATES tag
         tag(BlockTags.FENCE_GATES)
-                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .add(ModBlocks.BISMUTH_FENCE_GATE.get());
         // Add the walls to the WALLS tag
         tag(BlockTags.WALLS)
-                .add(ModBlocks.ALEXANDRITE_WALL.get());
+                .add(ModBlocks.ALEXANDRITE_WALL.get())
+                .add(ModBlocks.BISMUTH_WALL.get());
         // Add the doors to the DOORS tag
         tag(BlockTags.DOORS)
-                .add(ModBlocks.ALEXANDRITE_DOOR.get());
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
+                .add(ModBlocks.BISMUTH_DOOR.get());
         // Add the trapdoors to the TRAPDOORS tag
         tag(BlockTags.TRAPDOORS)
-                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get())
+                .add(ModBlocks.BISMUTH_TRAPDOOR.get());
         // Add the buttons to the BUTTONS tag
         tag(BlockTags.BUTTONS)
-                .add(ModBlocks.ALEXANDRITE_BUTTON.get());
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get())
+                .add(ModBlocks.BISMUTH_BUTTON.get());
         // Add the pressure plates to the PRESSURE_PLATES tag
         tag(BlockTags.PRESSURE_PLATES)
-                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get());
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.BISMUTH_PRESSURE_PLATE.get());
         // Add the stairs to the STAIRS tag
         tag(BlockTags.STAIRS)
-                .add(ModBlocks.ALEXANDRITE_STAIRS.get());
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.BISMUTH_STAIRS.get());
         // Add the slabs to the SLABS tag
         tag(BlockTags.SLABS)
-                .add(ModBlocks.ALEXANDRITE_SLAB.get());
+                .add(ModBlocks.ALEXANDRITE_SLAB.get())
+                .add(ModBlocks.BISMUTH_SLAB.get());
+        // Add the logs to the LOGS_THAT_BURN tag
+        tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WALNUT_LOG.get())
+                .add(ModBlocks.WALNUT_WOOD.get())
+                .add(ModBlocks.STRIPPED_WALNUT_LOG.get())
+                .add(ModBlocks.STRIPPED_WALNUT_WOOD.get());
+        tag(BlockTags.LOGS)
+                .add(ModBlocks.WALNUT_LOG.get())
+                .add(ModBlocks.WALNUT_WOOD.get())
+                .add(ModBlocks.STRIPPED_WALNUT_LOG.get())
+                .add(ModBlocks.STRIPPED_WALNUT_WOOD.get());
+        tag(BlockTags.LEAVES)
+                .add(ModBlocks.WALNUT_LEAVES.get());
     }
 }

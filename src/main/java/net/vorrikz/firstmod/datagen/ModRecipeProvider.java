@@ -55,12 +55,37 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         trapdoorBuilder(ModBlocks.ALEXANDRITE_TRAPDOOR.get(), Ingredient.of(ModItems.ALEXANDRITE.get())).group("alexandrite")
                 .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get()))
                 .save(recipeOutput);
+
+        nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, ModItems.BISMUTH.get(), RecipeCategory.MISC, ModBlocks.BISMUTH_BLOCK.get());
+        stairBuilder(ModBlocks.BISMUTH_STAIRS.get(), Ingredient.of(ModItems.BISMUTH.get())).group("bismuth")
+                .unlockedBy(getHasName(ModItems.BISMUTH.get()), has(ModItems.BISMUTH.get()))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_SLAB.get(), ModItems.BISMUTH.get());
+        buttonBuilder(ModBlocks.BISMUTH_BUTTON.get(), Ingredient.of(ModItems.BISMUTH.get())).group("bismuth")
+                .unlockedBy(getHasName(ModItems.BISMUTH.get()), has(ModItems.BISMUTH.get()))
+                .save(recipeOutput);
+        pressurePlate(recipeOutput, ModBlocks.BISMUTH_PRESSURE_PLATE.get(), ModItems.BISMUTH.get());
+        fenceBuilder(ModBlocks.BISMUTH_FENCE.get(), Ingredient.of(ModItems.BISMUTH.get())).group("bismuth")
+                .unlockedBy(getHasName(ModItems.BISMUTH.get()), has(ModItems.BISMUTH.get()))
+                .save(recipeOutput);
+        fenceGateBuilder(ModBlocks.BISMUTH_FENCE_GATE.get(), Ingredient.of(ModItems.BISMUTH.get())).group("bismuth")
+                .unlockedBy(getHasName(ModItems.BISMUTH.get()), has(ModItems.BISMUTH.get()))
+                .save(recipeOutput);
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_WALL.get(), ModItems.BISMUTH.get());
+        doorBuilder(ModBlocks.BISMUTH_DOOR.get(), Ingredient.of(ModItems.BISMUTH.get())).group("bismuth")
+                .unlockedBy(getHasName(ModItems.BISMUTH.get()), has(ModItems.BISMUTH.get()))
+                .save(recipeOutput);
+        trapdoorBuilder(ModBlocks.BISMUTH_TRAPDOOR.get(), Ingredient.of(ModItems.BISMUTH.get())).group("bismuth")
+                .unlockedBy(getHasName(ModItems.BISMUTH.get()), has(ModItems.BISMUTH.get()))
+                .save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGIC_BLOCK.get())
-                .pattern("AAA")
+                .pattern("CAC")
                 .pattern("ABA")
-                .pattern("AAA")
+                .pattern("CAC")
                 .define('A', ModBlocks.ALEXANDRITE_BLOCK.get())
                 .define('B', ModItems.CHISEL.get())
+                .define('C', ModBlocks.BISMUTH_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get()))
                 .save(recipeOutput);
         RecipeUtil.axe(recipeOutput, ModItems.ALEXANDRITE.get(), Items.STICK, ModItems.ALEXANDRITE_AXE);
@@ -73,30 +98,51 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         RecipeUtil.chestplate(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_CHESTPLATE);
         RecipeUtil.leggings(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_LEGGINGS);
         RecipeUtil.boots(recipeOutput, ModItems.ALEXANDRITE, ModItems.ALEXANDRITE_BOOTS);
+        RecipeUtil.axe(recipeOutput, ModItems.BISMUTH.get(), Items.STICK, ModItems.BISMUTH_AXE);
+        RecipeUtil.hoe(recipeOutput, ModItems.BISMUTH.get(), Items.STICK, ModItems.BISMUTH_HOE);
+        RecipeUtil.pickaxe(recipeOutput, ModItems.BISMUTH.get(), Items.STICK, ModItems.BISMUTH_PICKAXE);
+        RecipeUtil.sword(recipeOutput, ModItems.BISMUTH.get(), Items.STICK, ModItems.BISMUTH_SWORD);
+        RecipeUtil.shovel(recipeOutput, ModItems.BISMUTH.get(), Items.STICK, ModItems.BISMUTH_SHOVEL);
+        RecipeUtil.hammer(recipeOutput, ModItems.BISMUTH.get(), ModBlocks.BISMUTH_BLOCK.get(), Items.BLAZE_ROD, ModItems.BISMUTH_HAMMER);
+        RecipeUtil.helmet(recipeOutput, ModItems.BISMUTH, ModItems.BISMUTH_HELMET);
+        RecipeUtil.chestplate(recipeOutput, ModItems.BISMUTH, ModItems.BISMUTH_CHESTPLATE);
+        RecipeUtil.leggings(recipeOutput, ModItems.BISMUTH, ModItems.BISMUTH_LEGGINGS);
+        RecipeUtil.boots(recipeOutput, ModItems.BISMUTH, ModItems.BISMUTH_BOOTS);
+
         RecipeUtil.bow(recipeOutput, Items.BREEZE_ROD, ModItems.ALEXANDRITE.get(), Items.STRING, ModItems.VORRIK_BOW);
 
         // Shapeless recipes
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
-                .requires(ModBlocks.ALEXANDRITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get())).save(recipeOutput);
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
+//                .requires(ModBlocks.ALEXANDRITE_BLOCK.get())
+//                .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get())).save(recipeOutput);
+//
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ALEXANDRITE.get(), 9)
+//                .requires(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
+//                .unlockedBy(getHasName(ModBlocks.RAW_ALEXANDRITE_BLOCK.get()), has(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())).save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_ALEXANDRITE.get(), 9)
-                .requires(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.RAW_ALEXANDRITE_BLOCK.get()), has(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())).save(recipeOutput);
+        RecipeUtil.plank(ModBlocks.WALNUT_LOG.get(), ModBlocks.WALNUT_PLANKS).save(recipeOutput, FirstMod.MOD_ID + ":walnut_plank_from_walnut_log");
+        RecipeUtil.plank(ModBlocks.WALNUT_WOOD.get(), ModBlocks.WALNUT_PLANKS).save(recipeOutput, FirstMod.MOD_ID + ":walnut_plank_from_walnut_wood");
+        RecipeUtil.plank(ModBlocks.STRIPPED_WALNUT_LOG.get(), ModBlocks.WALNUT_PLANKS).save(recipeOutput, FirstMod.MOD_ID + ":walnut_plank_from_stripped_walnut_log");
+        RecipeUtil.plank(ModBlocks.STRIPPED_WALNUT_WOOD.get(), ModBlocks.WALNUT_PLANKS).save(recipeOutput, FirstMod.MOD_ID + ":walnut_plank_from_stripped_walnut_wood");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 32)
-                .requires(ModBlocks.MAGIC_BLOCK.get())
-                .unlockedBy(getHasName(ModBlocks.ALEXANDRITE_BLOCK.get()), has(ModBlocks.ALEXANDRITE_BLOCK.get()))
-                .save(recipeOutput, FirstMod.MOD_ID + ":alexandrite_from_magic_block");
 
         // Lists for items that can be smelted / blasted
         List<ItemLike> ALEXANDRITE_SMELTABLES = List.of(ModItems.RAW_ALEXANDRITE.get(),
-                ModBlocks.ALEXANDRITE_ORE.get(), ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
+                ModBlocks.ALEXANDRITE_ORE.get(), ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
+                ModBlocks.ALEXANDRITE_NETHER_ORE.get(), ModBlocks.ALEXANDRITE_END_ORE.get());
+        List<ItemLike> BISMUTH_SMELTABLES = List.of(ModItems.RAW_BISMUTH.get(),
+                ModBlocks.BISMUTH_ORE.get(), ModBlocks.BISMUTH_DEEPSLATE_ORE.get(),
+                ModBlocks.BISMUTH_NETHER_ORE.get(), ModBlocks.BISMUTH_END_ORE.get());
 
         // Smelting
         oreSmelting(recipeOutput, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200, "alexandrite");
+
+        oreSmelting(recipeOutput, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.4f, 300, "bismuth");
+
         // Blasting
         oreBlasting(recipeOutput, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 100, "alexandrite");
+
+        oreBlasting(recipeOutput, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.4f, 150, "bismuth");
     }
 
     // Helper method for ore smelting recipe generation
@@ -162,6 +208,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
         public static void bow(RecipeOutput recipeOutput, Item handleMaterial, Item SideMaterial, Item BowString, RegistryObject<Item> result) {
             ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, result.get()).pattern(" BC").pattern("A C").pattern(" BC").define('A', handleMaterial).define('B', SideMaterial).define('C', BowString).unlockedBy(getHasName(SideMaterial), has(SideMaterial)).save(recipeOutput);
+        }
+        public static ShapelessRecipeBuilder plank(Block wood, RegistryObject<Block> plank) {
+            return ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, plank.get(), 4).requires(wood).unlockedBy(getHasName(wood), has(wood));
         }
     }
 }
