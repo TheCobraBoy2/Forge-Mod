@@ -1,5 +1,6 @@
 package net.vorrikz.firstmod.datagen;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -8,13 +9,18 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.block.custom.KohlrabiCropBlock;
 import net.vorrikz.firstmod.item.ModItems;
 
 import java.util.Set;
@@ -51,6 +57,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.ALEXANDRITE_DOOR.get(),
                 block -> createDoorTable(ModBlocks.ALEXANDRITE_DOOR.get()));
+
+        // Add drop tables for blocks with conditions
+        this.add(ModBlocks.KOHLRABI_CROP.get(), this.createCropDrops(ModBlocks.KOHLRABI_CROP.get(),
+                ModItems.KOHLRABI.get(), ModItems.KOHLRABI_SEEDS.get(), cropCondtionBuilder(ModBlocks.KOHLRABI_CROP.get(), KohlrabiCropBlock.AGE, KohlrabiCropBlock.MAX_AGE)));
+    }
+
+    // Helper method for crops
+    private static LootItemCondition.Builder cropCondtionBuilder(Block block, IntegerProperty age, int maxAge) {
+        return LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(age, maxAge));
     }
 
     // Helper method for ore drops with multiple items

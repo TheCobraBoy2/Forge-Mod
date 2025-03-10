@@ -3,17 +3,21 @@ package net.vorrikz.firstmod.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.block.custom.AlexandriteLampBlock;
+import net.vorrikz.firstmod.block.custom.KohlrabiCropBlock;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -53,6 +57,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // Lamps
         customLamp(ModBlocks.ALEXANDRITE_LAMP, "alexandrite_lamp", AlexandriteLampBlock.CLICKED);
 
+        // Crops
+        makeCrop(((CropBlock)ModBlocks.KOHLRABI_CROP.get()), "kohlrabi_crop_stage", "kohlrabi_crop_stage");
+
         // Item block json files for the ones that don't get them auto generated
         blockItem(ModBlocks.ALEXANDRITE_STAIRS);
         blockItem(ModBlocks.ALEXANDRITE_SLAB);
@@ -60,6 +67,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.ALEXANDRITE_FENCE_GATE);
         blockItem(ModBlocks.ALEXANDRITE_TRAPDOOR, "_bottom");
     }
+    // Method for crops
+    public void makeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> states(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    // Helper method for crops
+    private ConfiguredModel[] states(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()),
+                ResourceLocation.fromNamespaceAndPath(FirstMod.MOD_ID, "block/" + textureName + state.getValue(((KohlrabiCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
     // Method for a lamp
     private void customLamp(RegistryObject<? extends Block> block, String name, BooleanProperty onOffState) {
         System.out.println("id = " + block.getId() + " name = " + block.get().getName());

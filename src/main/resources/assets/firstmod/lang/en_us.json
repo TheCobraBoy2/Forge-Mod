@@ -3,7 +3,10 @@
   "item.firstmod.raw_alexandrite": "Raw Alexandrite",
 
   "item.firstmod.chisel": "Chisel",
+
   "item.firstmod.kohlrabi": "Kohlrabi",
+  "item.firstmod.kohlrabi_seeds": "Kohlrabi Seeds",
+
   "item.firstmod.aurora_ashes": "Aurora Ashes",
 
   "item.firstmod.alexandrite_sword": "Alexandrite Sword",
@@ -64,6 +67,8 @@
   "block.firstmod.alexandrite_trapdoor": "Alexandrite Trapdoor",
 
   "block.firstmod.alexandrite_lamp": "Alexandrite Lamp",
+
+  "block.firstmod.kohlrabi_crop": "Kohlrabi Crop",
 
   "creativetab.firstmod.alexandrite_items": "Alexandrite Items",
   "creativetab.firstmod.alexandrite_blocks": "Alexandrite Blocks",

@@ -133,6 +133,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Music disc
         basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+
+        // Seeds
+        basicItem(ModItems.KOHLRABI_SEEDS.get());
     }
 
     // Helper method for tools / hand held items

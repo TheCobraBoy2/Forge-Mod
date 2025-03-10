@@ -13,6 +13,7 @@ import net.vorrikz.firstmod.FirstMod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.vorrikz.firstmod.block.custom.AlexandriteLampBlock;
+import net.vorrikz.firstmod.block.custom.KohlrabiCropBlock;
 import net.vorrikz.firstmod.block.custom.MagicBlock;
 import net.vorrikz.firstmod.item.ModItems;
 import net.vorrikz.firstmod.sound.ModSounds;
@@ -74,6 +75,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
             () -> new AlexandriteLampBlock(BlockBehaviour.Properties.of().strength(3f)
                     .lightLevel(state -> state.getValue(AlexandriteLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
+            () -> new KohlrabiCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
 
     // Helper method to register the block

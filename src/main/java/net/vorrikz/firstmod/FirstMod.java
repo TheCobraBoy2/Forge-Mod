@@ -2,6 +2,7 @@ package net.vorrikz.firstmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -69,7 +70,10 @@ public class FirstMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI.get(), 0.4f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI_SEEDS.get(), 0.15f);
+        });
     }
 
     // Add items to vanilla creative mode tabs

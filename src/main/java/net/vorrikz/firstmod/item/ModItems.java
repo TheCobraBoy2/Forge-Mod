@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.FirstMod;
+import net.vorrikz.firstmod.block.ModBlocks;
 import net.vorrikz.firstmod.item.custom.FuelItem;
 import net.vorrikz.firstmod.item.custom.ChiselItem;
 import net.vorrikz.firstmod.item.custom.HammerItem;
@@ -85,6 +86,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).stacksTo(1)));
+
+    public static final RegistryObject<Item> KOHLRABI_SEEDS = ITEMS.register("kohlrabi_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.KOHLRABI_CROP.get(), new Item.Properties()));
 
     // Method to register the items
     public static void register(IEventBus eventBus) {
