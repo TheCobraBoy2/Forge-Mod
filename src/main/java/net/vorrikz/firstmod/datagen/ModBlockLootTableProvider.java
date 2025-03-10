@@ -49,10 +49,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         // Add drop tables for blocks that don't drop themselves
         this.add(ModBlocks.ALEXANDRITE_ORE.get(),
-                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 4));
-
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 2));
         this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 3, 7));
+        this.add(ModBlocks.ALEXANDRITE_END_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_END_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 5, 8));
+        this.add(ModBlocks.ALEXANDRITE_NETHER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_NETHER_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 1, 6));
 
         this.add(ModBlocks.ALEXANDRITE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.ALEXANDRITE_SLAB.get()));
