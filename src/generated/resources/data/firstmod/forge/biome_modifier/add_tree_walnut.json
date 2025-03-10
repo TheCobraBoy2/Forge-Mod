@@ -4,6 +4,6 @@
     "minecraft:plains",
     "minecraft:savanna"
   ],
-  "features": "firstmod:walnut_places",
+  "features": "firstmod:walnut_placed",
   "step": "vegetal_decoration"
 }
