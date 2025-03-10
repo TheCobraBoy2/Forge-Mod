@@ -1,2 +1,2 @@
 # Currently working on
-###  World gen
+###  Ore generation
