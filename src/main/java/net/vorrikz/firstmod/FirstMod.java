@@ -1,6 +1,7 @@
 package net.vorrikz.firstmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -20,6 +21,8 @@ import net.vorrikz.firstmod.component.ModDataComponentTypes;
 import net.vorrikz.firstmod.effect.ModEffects;
 import net.vorrikz.firstmod.enchantment.ModEnchantmentEffects;
 import net.vorrikz.firstmod.enchantment.ModEnchantments;
+import net.vorrikz.firstmod.entity.ModEntities;
+import net.vorrikz.firstmod.entity.client.triceratops.Renderer;
 import net.vorrikz.firstmod.item.ModCreativeModeTabs;
 import net.vorrikz.firstmod.item.ModItems;
 import net.vorrikz.firstmod.potion.ModPotions;
@@ -51,6 +54,9 @@ public class FirstMod {
 
         // Register the data component types with the event bus
         ModDataComponentTypes.register(modEventBus);
+
+        // Register the Entities with the event bus
+        ModEntities.register(modEventBus);
 
         // Register the sounds with the event bus
         ModSounds.register(modEventBus);
@@ -157,6 +163,8 @@ public class FirstMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             ModItemProperties.addCustomItemProperties();
+
+            EntityRenderers.register(ModEntities.TRICERATOPS.get(), Renderer::new);
         }
     }
 }

@@ -2,6 +2,7 @@ package net.vorrikz.firstmod.item;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -9,6 +10,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vorrikz.firstmod.FirstMod;
 import net.vorrikz.firstmod.block.ModBlocks;
+import net.vorrikz.firstmod.entity.ModEntities;
 import net.vorrikz.firstmod.item.custom.FuelItem;
 import net.vorrikz.firstmod.item.custom.ChiselItem;
 import net.vorrikz.firstmod.item.custom.HammerItem;
@@ -154,6 +156,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> GOJI_BERRIES = ITEMS.register("goji_berries",
             () -> new ItemNameBlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), new Item.Properties().food(ModFoodProperties.GOJI_BERRY)));
+
+    public static final RegistryObject<Item> TRICERATOPS_SPAWN_EGG = ITEMS.register("triceratops_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.TRICERATOPS, 0x53524b, 0xdac741, new Item.Properties()));
 
     // Method to register the items
     public static void register(IEventBus eventBus) {

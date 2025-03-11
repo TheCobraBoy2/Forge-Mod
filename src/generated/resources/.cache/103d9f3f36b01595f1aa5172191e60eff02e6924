@@ -1,4 +1,4 @@
-// 1.21	2025-03-10T18:52:10.4308892	Registries
+// 1.21	2025-03-10T22:05:24.1777307	Registries
 6a12452d86bacde91d316c7b4b411362674320b2 data/firstmod/enchantment/lightning_striker.json
 8cc2017e4d12e2ae65edc130692ff18b67317a0c data/firstmod/forge/biome_modifier/add_alexandrite_ore.json
 5549cc4a8ad3e02f1b1c7ac3f387ce763586b8fa data/firstmod/forge/biome_modifier/add_bismuth_ore.json
@@ -9,6 +9,7 @@ ce07ada1288857a65ece04ae4f94a7a9e8b7f4c3 data/firstmod/forge/biome_modifier/add_
 515c9fb32e1a1df9e91a408f4614c862c46d7009 data/firstmod/forge/biome_modifier/add_nether_alexandrite_ore.json
 1d26c24356359993ef4bfc247d7403c2a5c15a49 data/firstmod/forge/biome_modifier/add_nether_bismuth_ore.json
 346797106028a1e35991947a860021ca0cfa99f5 data/firstmod/forge/biome_modifier/add_tree_walnut.json
+dddadcb8e6072c80d0f474ec41403f54a8338bd1 data/firstmod/forge/biome_modifier/spawn_triceratops.json
 01a186164c024a53df73ffeb0742ca0ba2dcdfd4 data/firstmod/worldgen/configured_feature/alexandrite_ore.json
 4e5a6e587366bd4686adade606be8955013f8485 data/firstmod/worldgen/configured_feature/bismuth_ore.json
 8c283e6b5169992f6d303bcf084bbf8134d1c642 data/firstmod/worldgen/configured_feature/end_alexandrite_ore.json

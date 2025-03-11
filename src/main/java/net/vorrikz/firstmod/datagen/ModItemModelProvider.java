@@ -175,6 +175,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // Saplings
         saplingItem(ModBlocks.WALNUT_SAPLING);
+
+        // Spawn eggs
+        withExistingParent(ModItems.TRICERATOPS_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     // Helper method for saplings

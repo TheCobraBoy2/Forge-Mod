@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "minecraft:jungle",
+  "spawners": {
+    "type": "firstmod:triceratops",
+    "maxCount": 5,
+    "minCount": 3,
+    "weight": 25
+  }
+}

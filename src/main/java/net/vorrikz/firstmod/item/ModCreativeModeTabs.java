@@ -82,6 +82,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.GOJI_BERRIES.get());
 
+                        output.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
+
 
                         // Blocks
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());

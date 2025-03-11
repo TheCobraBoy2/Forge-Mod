@@ -56,9 +56,12 @@
   "item.firstmod.bar_brawl_music_disc": "Bar Brawn Music Disc",
   "item.firstmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawn (CC0)",
 
+  "item.firstmod.triceratops_spawn_egg": "Triceratops Spawn Egg",
+
   "item.minecraft.potion.effect.firstmod.slimey_potion":"Slimey Potion",
   "item.minecraft.splash_potion.effect.firstmod.slimey_potion":"Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.firstmod.slimey_potion":"Slimey Lingering Potion",
+
 
   "effect.firstmod.slimey": "Slimey",
 
@@ -135,6 +138,8 @@
   "block.firstmod.radish_crop": "Radish Crop",
 
   "block.firstmod.goji_berry_bush": "Goji Berry Bush",
+
+  "entity.firstmod.triceratops": "Triceratops",
 
   "creativetab.firstmod.first_mod": "First Mod Items",
 

@@ -1,4 +1,4 @@
-// 1.21	2025-03-10T00:34:47.5775581	Item Models: firstmod
+// 1.21	2025-03-10T21:32:34.5229876	Item Models: firstmod
 277d23d82cc594e89a3be1f963c9a3e9ab9e2e89 assets/firstmod/models/item/alexandrite.json
 b7dd8e73135f0ac5695b9f631008bd5b4b179921 assets/firstmod/models/item/alexandrite_axe.json
 247a5031fce43734e6f0c0fafc2ca8963e93b0d6 assets/firstmod/models/item/alexandrite_boots.json
@@ -122,4 +122,5 @@ fe46532a549c25732c4686a5c3ff4447a244361a assets/firstmod/models/item/radish.json
 53d9e2b2ec35e34410c8b78caeede8c01e1865f7 assets/firstmod/models/item/raw_alexandrite.json
 c4998df314eee0dd3d25e2eee4ea07a227b9deaf assets/firstmod/models/item/raw_bismuth.json
 b55b4dfbfe4fc458062202c1c50ffc80a336f464 assets/firstmod/models/item/starlight_ashes.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/firstmod/models/item/triceratops_spawn_egg.json
 3333fc6a8460402ce0e9150d1b0365f30055787c assets/firstmod/models/item/walnut_sapling.json
